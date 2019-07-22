@@ -10,8 +10,11 @@ const IndexPage = () => (
   <Layout>
     <Parallax y={[0, 0]} className="bg-container index-layout">
       <div className="hero">
-        <Parallax y={[-400, 400]}>
-          <h1>Hello Parallax!</h1>
+        <Parallax y={[-500, 500]}>
+          <span style={{margin: '10px'}}>Hello Parallax!</span>
+        </Parallax>
+        <Parallax y={[0, 0]}>
+          <span style={{margin: '10px'}}>Hello Parallax!</span>
         </Parallax>
       </div>
       <div className="posts">

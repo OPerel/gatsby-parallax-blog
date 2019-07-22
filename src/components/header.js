@@ -52,8 +52,8 @@ class Header extends React.Component {
                   </p>
                 </div>
                 <nav>
-                  <Link to='/'>Home</Link>
-                  <Link to='/about'>About Me</Link>
+                  <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Home</Link>
+                  <Link to='/about' activeStyle={{ textDecoration: 'underline' }}>About Me</Link>
                 </nav>
               </header>
             </>

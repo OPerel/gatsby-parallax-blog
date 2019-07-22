@@ -21,7 +21,10 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <main style={{ position: 'relative' }}>
         {children}
-        <Parallax y={[0, 0]} className="tri"></Parallax>
+        <Parallax
+          y={[-1, 1]}
+          className="tri"
+        ></Parallax>
       </main>
       <Parallax
         y={[-60, 165]}
