@@ -1,12 +1,19 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 const Footer = () => (
-  <footer>
-    <p>My G-Blog</p>
-    <p>© {new Date().getFullYear()}, Built with
-    {` `}
-    <a href="https://www.gatsbyjs.org">Gatsby</a></p>
-  </footer>
+  <>
+    <footer>
+      <Parallax y={['-30px', '350px']}>
+        <p>My G-Blog</p>
+      </Parallax>
+      <Parallax y={['-30px', '350px']}>
+        <p>© {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a></p>
+      </Parallax>
+    </footer>
+  </>
 )
 
 export default Footer;

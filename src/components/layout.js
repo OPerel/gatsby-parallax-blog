@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import Header from "./header";
 import Footer from './footer';
-import "./layout.css"
+import "../assets/allStyles.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,9 +19,12 @@ const Layout = ({ children }) => {
   return (
     <ParallaxProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <main style={{ position: 'relative' }}>
+        {children}
+        <Parallax y={[0, 0]} className="tri"></Parallax>
+      </main>
       <Parallax
-        y={[-75, 250]}
+        y={[-60, 165]}
         styleOuter={{ position: 'relative', zIndex: '-2' }}
       >
         <Footer />

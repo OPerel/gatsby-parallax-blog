@@ -8,13 +8,13 @@ import '../assets/allStyles.css';
 
 const IndexPage = () => (
   <Layout>
-    <Parallax y={[10, -10]} className="bg-container">
+    <Parallax y={[0, 0]} className="bg-container index-layout">
       <div className="hero">
-        <Parallax y={[-420, 420]}>
+        <Parallax y={[-400, 400]}>
           <h1>Hello Parallax!</h1>
         </Parallax>
       </div>
-      <div style={{ width: '75%', margin: '10% auto' }}>
+      <div className="posts">
         <PostLink />
         <PostLink />
         <PostLink />

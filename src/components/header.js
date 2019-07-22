@@ -11,10 +11,16 @@ class Header extends React.Component {
     }
   }
 
+  updateScrollPos = () => {
+    this.setState({ scrollPos: window.scrollY });
+  }
+
   componentDidMount() {
-    document.addEventListener('scroll', () => {
-      this.setState({ scrollPos: window.scrollY })
-    })
+    document.addEventListener('scroll', this.updateScrollPos);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.updateScrollPos);
   }
 
   render () {
@@ -41,9 +47,9 @@ class Header extends React.Component {
               >
                 <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
                   <Img fixed={data.icon.childImageSharp.fixed} style={{ margin: '0 5%'}} />
-                  <h1 style={{ margin: 0 }}>
+                  <p style={{ margin: 0 }}>
                     {this.props.siteTitle}
-                  </h1>
+                  </p>
                 </div>
                 <nav>
                   <Link to='/'>Home</Link>
