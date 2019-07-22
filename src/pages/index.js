@@ -1,21 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+// import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { Parallax } from 'react-scroll-parallax';
+import Layout from "../components/layout";
+import PostLink from '../components/postLink';
+import '../assets/allStyles.css';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Parallax y={[10, -10]} className="bg-container">
+      <div className="hero">
+        <Parallax y={[-420, 420]}>
+          <h1>Hello Parallax!</h1>
+        </Parallax>
+      </div>
+      <div style={{ width: '75%', margin: '10% auto' }}>
+        <PostLink />
+        <PostLink />
+        <PostLink />
+        <PostLink />
+        <PostLink />
+      </div>
+    </Parallax>
   </Layout>
 )
 
-export default IndexPage
+export default IndexPage;
