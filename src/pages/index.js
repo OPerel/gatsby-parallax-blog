@@ -1,31 +1,56 @@
 import React from "react";
-// import { Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import { Parallax } from 'react-scroll-parallax';
 import Layout from "../components/layout";
 import PostLink from '../components/postLink';
 import '../assets/allStyles.css';
 
-const IndexPage = () => (
-  <Layout>
-    <div className="bg-container index-layout">
-      <div className="hero">
-        <Parallax y={[-500, 500]}>
-          <span style={{margin: '10px'}}>Hello Parallax!</span>
-        </Parallax>
-        <Parallax y={[0, 0]}>
-          <span style={{margin: '10px'}}>Hello Parallax!</span>
-        </Parallax>
+const IndexPage = ({ data }) => {
+  console.log(data);
+  const { edges } = data.allMarkdownRemark;
+  return (
+    <Layout>
+      <div className="bg-container index-layout">
+        <div className="hero">
+          <Parallax y={[-500, 500]}>
+            <span style={{margin: '10px'}}>Hello Parallax!</span>
+          </Parallax>
+          <Parallax y={[0, 0]}>
+            <span style={{margin: '10px'}}>Hello Parallax!</span>
+          </Parallax>
+        </div>
+        <div className="posts">
+          {
+            edges.map(post => {
+              return (
+                <PostLink
+                  key={post.node.id}
+                  postData={post.node}
+                />
+              )
+            })
+          }
+        </div>
       </div>
-      <div className="posts">
-        <PostLink />
-        <PostLink />
-        <PostLink />
-        <PostLink />
-        <PostLink />
-      </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
+
+export const query = graphql`{
+  allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+    edges {
+      node {
+        id
+        frontmatter {
+          author
+          date
+          title
+        }
+        excerpt(format: HTML)
+      }
+    }
+  }
+}`
 
 export default IndexPage;

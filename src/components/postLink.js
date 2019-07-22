@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "gatsby";
 
-const PostLink = () => (
+const PostLink = ({ postData }) => (
   <div
     style={{
       width: '75%',
@@ -10,9 +10,8 @@ const PostLink = () => (
       padding: '40px',
       color: 'white',
       border: 'solid 1px white',
-      textAlign: 'center'
   }}>
-    <h3>Blog Post</h3>
+    <h3 dangerouslySetInnerHTML={{ __html: postData.frontmatter.title }}></h3>
   </div>
 )
 
