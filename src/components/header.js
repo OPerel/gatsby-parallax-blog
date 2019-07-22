@@ -39,7 +39,7 @@ class Header extends React.Component {
                   background: scrollPos < 150 ? `transparent` : `#222222`
                 }}
               >
-                <div style={{ display: 'flex' }}>
+                <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
                   <Img fixed={data.icon.childImageSharp.fixed} style={{ margin: '0 5%'}} />
                   <h1 style={{ margin: 0 }}>
                     {this.props.siteTitle}
