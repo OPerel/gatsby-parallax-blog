@@ -8,7 +8,7 @@ import '../assets/allStyles.css';
 
 const IndexPage = () => (
   <Layout>
-    <Parallax y={[0, 0]} className="bg-container index-layout">
+    <div className="bg-container index-layout">
       <div className="hero">
         <Parallax y={[-500, 500]}>
           <span style={{margin: '10px'}}>Hello Parallax!</span>
@@ -24,7 +24,7 @@ const IndexPage = () => (
         <PostLink />
         <PostLink />
       </div>
-    </Parallax>
+    </div>
   </Layout>
 )
 
