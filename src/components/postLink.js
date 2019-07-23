@@ -1,18 +1,16 @@
 import React from "react";
-// import { Link } from "gatsby";
+import { Link } from "gatsby";
 
-const PostLink = ({ postData }) => (
-  <div
-    style={{
-      width: '75%',
-      height: '100px',
-      margin: '5% auto',
-      padding: '40px',
-      color: 'white',
-      border: 'solid 1px white',
-  }}>
-    <h3 dangerouslySetInnerHTML={{ __html: postData.frontmatter.title }}></h3>
+const PostLink = ({ postData }) => {
+  const excerpt = postData.excerpt.replace(/ *<h2>.*?<\/h2> */g, "");
+  return (
+  <div className="post-link">
+    <Link to='/'>
+      <h3 dangerouslySetInnerHTML={{ __html: postData.frontmatter.title }}></h3>
+      <p dangerouslySetInnerHTML={{ __html: excerpt }}></p>
+    </Link>
   </div>
 )
+}
 
 export default PostLink;

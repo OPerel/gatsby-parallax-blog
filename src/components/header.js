@@ -1,7 +1,8 @@
 import { Link, graphql, StaticQuery } from "gatsby";
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import React from "react";
 import SEO from './seo';
+// import bgImg from '../images/favicon.png'
 
 class Header extends React.Component {
   constructor (props) {
@@ -46,7 +47,7 @@ class Header extends React.Component {
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-                  <Img fixed={data.icon.childImageSharp.fixed} style={{ margin: '0 5%'}} />
+                  <div id='logo'></div>
                   <p style={{ margin: 0 }}>
                     {this.props.siteTitle}
                   </p>

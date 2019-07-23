@@ -20,15 +20,14 @@ const Layout = ({ children }) => {
     <ParallaxProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main style={{ position: 'relative' }}>
-        {children}
-        <Parallax
-          y={[-1, 1]}
-          className="tri"
-        ></Parallax>
+        <div className="bg-container">
+          {children}
+        </div>
+        <div className="tri" />
       </main>
       <Parallax
         y={[-60, 165]}
-        styleOuter={{ position: 'relative', zIndex: '-2' }}
+        styleOuter={{ position: 'relative', zIndex: '1' }}
       >
         <Footer />
       </Parallax>

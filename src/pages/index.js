@@ -7,11 +7,10 @@ import PostLink from '../components/postLink';
 import '../assets/allStyles.css';
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <div className="bg-container index-layout">
+      <div className="index-layout">
         <div className="hero">
           <Parallax y={[-500, 500]}>
             <span style={{margin: '10px'}}>Hello Parallax!</span>
