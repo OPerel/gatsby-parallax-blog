@@ -102,7 +102,7 @@ footer p {
 }
 
 .bg-container {
-  position: inherit;
+  position: relative;
   z-index: 2;
   background-image: url('../images/bg.jpg');
   background-size: cover;

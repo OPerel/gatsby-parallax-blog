@@ -48,6 +48,9 @@ export const query = graphql`{
           date
           title
         }
+        fields {
+          slug
+        }
         excerpt(format: HTML)
       }
     }

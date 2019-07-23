@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+// import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import Header from "./header";
 import Footer from './footer';
 import "../assets/allStyles.css"
@@ -17,12 +17,10 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div style={{position: 'relative'}}>
+    <div className="bg-container">
       <Header siteTitle={data.site.siteMetadata.title} />
       <main style={{ position: 'relative' }}>
-        <div className="bg-container">
-          {children}
-        </div>
+        {children}
         <div className="tri" />
       </main>
       {/*}<Parallax
