@@ -76,7 +76,7 @@ header nav {
 footer {
   /* position: absolute;
   bottom: 0;
-  z-index: -2; */
+  z-index: 1; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -87,7 +87,7 @@ footer {
 }
 
 footer p {
-  margin-bottom: 5%;
+  margin: 0;
 }
 
 .bg-container {

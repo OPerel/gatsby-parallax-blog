@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import { Parallax } from 'react-scroll-parallax';
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import Layout from "../components/layout";
 import PostLink from '../components/postLink';
 import '../assets/allStyles.css';
@@ -10,6 +10,7 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
+    <ParallaxProvider>
       <div className="index-layout">
         <div className="hero">
           <Parallax y={[-500, 500]}>
@@ -32,6 +33,7 @@ const IndexPage = ({ data }) => {
           }
         </div>
       </div>
+    </ParallaxProvider>
     </Layout>
   )
 }
