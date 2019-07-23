@@ -63,6 +63,17 @@ header #logo {
   background-image: url('../images/favicon.png');
   background-size: contain;
   border-radius: 50%;
+  animation: logoRotate 3s linear infinite;
+}
+
+@keyframes logoRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 header nav {
