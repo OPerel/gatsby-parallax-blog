@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../components/layout";
 import '../assets/allStyles.css'
 
-const SecondPage = () => (
+const About = () => (
     <Layout>
       <div style={{ height: '100vh' }}>
         <div className="about">
@@ -15,4 +15,4 @@ const SecondPage = () => (
     </Layout>
 )
 
-export default SecondPage
+export default About;
