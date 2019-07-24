@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import { Parallax } from 'react-scroll-parallax';
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import Layout from "../components/layout";
 import PostLink from '../components/postLink';
 // import Footer from '../components/footer'
@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
           <span style={{margin: '10px'}}>Hello Parallax!</span>
         </Parallax>
       </div>
-      <div className="posts">
+      <div className="content">
         {
           edges.map(post => {
             return (
@@ -44,6 +44,9 @@ export const query = graphql`{
           author
           date
           title
+        }
+        fields {
+          slug
         }
         excerpt(format: HTML)
       }
