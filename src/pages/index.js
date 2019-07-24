@@ -19,17 +19,19 @@ const IndexPage = ({ data }) => {
           <span style={{margin: '10px'}}>Hello Parallax!</span>
         </Parallax>
       </div>
-      <div className="content">
-        {
-          edges.map(post => {
-            return (
-              <PostLink
-                key={post.node.id}
-                postData={post.node}
-              />
-            )
-          })
-        }
+      <div className="content-wrapper">
+        <div className="content">
+          {
+            edges.map(post => {
+              return (
+                <PostLink
+                  key={post.node.id}
+                  postData={post.node}
+                />
+              )
+            })
+          }
+        </div>
       </div>
     </Layout>
   )

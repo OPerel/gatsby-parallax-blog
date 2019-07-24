@@ -20,7 +20,6 @@ const Layout = ({ children, loc }) => {
     <ParallaxProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="bg-container">
-        {/*<div style={{ height: '10vh' }}></div>*/}
         {children}
         <div style={{position: 'sticky', bottom: '0'}}>
           <div className="tri" />

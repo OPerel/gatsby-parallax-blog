@@ -30,6 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               author
               date
+              title
             }
             html
           }
@@ -49,7 +50,10 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: edge.node.fields.slug,
       component: slash(postTemplate),
-      context: edge.node
+      context: {
+        post: edge.node,
+        title: edge.node.frontmatter.title
+      }
     })
   })
 }

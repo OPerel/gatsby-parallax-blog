@@ -1,5 +1,5 @@
 ---
-title: 'Second Blog Post'
+title: 'post2'
 author: 'Me'
 date: '2019-7-16'
 ---

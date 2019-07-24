@@ -9,10 +9,10 @@ class Footer extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log('prev loc', prevProps.loc);
-    console.log('this loc', this.props.loc);
-    console.log('prev', prevProps);
-    console.log('this', this.props);
+    // console.log('prev loc', prevProps.loc);
+    // console.log('this loc', this.props.loc);
+    // console.log('prev', prevProps);
+    // console.log('this', this.props);
     if (prevProps.loc !== this.props.loc) {
       this.props.parallaxController.update()
     }
