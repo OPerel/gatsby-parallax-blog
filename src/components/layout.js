@@ -5,7 +5,7 @@ import Header from "./header";
 import Footer from './footer';
 import "../assets/allStyles.css"
 
-const Layout = ({ children, loc }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -16,6 +16,7 @@ const Layout = ({ children, loc }) => {
     }
   `)
 
+  // console.log('layout', location);
   return (
     <ParallaxProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -26,7 +27,7 @@ const Layout = ({ children, loc }) => {
         </div>
       </main>
       <Parallax y={[-100, 221]}>
-        <Footer loc={loc} />
+        <Footer location={location} />
       </Parallax>
     </ParallaxProvider>
   )

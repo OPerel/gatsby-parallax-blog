@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax, withController } from 'react-scroll-parallax';
 import PropTypes from 'prop-types';
-import { withController } from "react-scroll-parallax"
 
 class Footer extends Component {
   static propTypes = {
@@ -9,16 +8,15 @@ class Footer extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    // console.log('prev loc', prevProps.loc);
-    // console.log('this loc', this.props.loc);
-    // console.log('prev', prevProps);
-    // console.log('this', this.props);
-    if (prevProps.loc !== this.props.loc) {
+    // console.log(this.props.location.pathname);
+    // console.log(prevProps.location.pathname);
+    if (prevProps.location !== this.props.location) {
       this.props.parallaxController.update()
     }
   }
 
   render() {
+    console.log(withController);
     return (
       <footer>
         <Parallax y={["30px", "-100px"]}>

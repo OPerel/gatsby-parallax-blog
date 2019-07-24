@@ -1,7 +1,10 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// import { parallaxController } from 'react-scroll-parallax';
 
-// You can delete this file if you're not using it
+export const onRouteUpdate = ({ location, prevLocation }) => {
+  if (prevLocation) {
+    if (location.pathname !== prevLocation.pathname) {
+      // console.log(location.pathname, prevLocation.pathname);
+      return true;
+    }
+  }
+}

@@ -5,8 +5,8 @@ import Layout from "../components/layout";
 // import Footer from '../components/footer'
 import '../assets/allStyles.css'
 
-const About = () => (
-    <Layout loc='about'>
+const About = ({ location }) => (
+    <Layout location={location}>
       <div style={{ height: '100vh' }}>
         <div className="about">
           <h1>Hello!</h1>

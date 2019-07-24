@@ -5,12 +5,9 @@ import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import '../assets/allStyles.css';
 
-export default ({ pageContext, data }) => {
-  // console.log(pageContext.title);
-  // console.log(pageContext.post.frontmatter.title);
-  console.log(data);
+export default ({ pageContext, data, location }) => {
   return(
-    <Layout>
+    <Layout location={location}>
       <div style={{ height: '10vh' }}></div>
       <div className="content-wrapper">
         <Img

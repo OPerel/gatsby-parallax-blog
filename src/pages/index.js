@@ -7,11 +7,11 @@ import PostLink from '../components/postLink';
 // import Footer from '../components/footer'
 import '../assets/allStyles.css';
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const { edges } = data.allMarkdownRemark;
   const images = data.allFile.edges;
   return (
-    <Layout loc='home'>
+    <Layout location={location}>
       <div className="hero">
         <Parallax y={[-500, 500]}>
           <span style={{margin: '10px'}}>Hello Parallax!</span>
@@ -25,7 +25,6 @@ const IndexPage = ({ data }) => {
           {
             edges.map(({ node }) => {
               const image = images.filter(image => image.node.name === node.frontmatter.title);
-              console.log(image);
               return (
                 <PostLink
                   key={node.id}
