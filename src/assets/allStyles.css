@@ -144,7 +144,7 @@ footer p {
 }
 
 .content-wrapper {
-  width: 65%;
+  width: 75%;
   margin: 10% auto 0;
   background-color: rgba(35, 35, 35, 0.8)
 }
@@ -154,10 +154,9 @@ footer p {
 }
 
 .content .post-link {
-  width: 65%;
-  height: 100px;
+  width: 80%;
   margin: 5% auto;
-  padding: 0 0 70px 0;
+  padding: 0 0 20px 0;
   color: white;
   border-bottom: solid 0.5px white;
   opacity: 0.6;
@@ -165,8 +164,12 @@ footer p {
 
 .content .post-link .grid {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+.content .post-link .grid .post-thumbnail {
+  grid-row-start: 1;
+  margin-bottom: 5%;
 }
 
 .content .post-link:last-of-type {
@@ -192,4 +195,17 @@ footer p {
   width: 75%;
   height: 60vh;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 770px) {
+  .content .post-link .grid {
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 2%;
+    align-items: center;
+  }
+
+  .content .post-link .grid .post-thumbnail {
+    grid-row-start: initial;
+    margin: 0;
+  }
 }
