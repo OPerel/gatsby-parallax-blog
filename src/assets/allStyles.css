@@ -5,6 +5,7 @@ html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body {
@@ -120,6 +121,7 @@ footer p {
 .tri {
   position: absolute;
   bottom: calc(-75px + 1px);
+  left: 0;
   z-index: 2;
   width: 0;
   height: 0;

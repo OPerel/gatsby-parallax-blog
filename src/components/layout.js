@@ -5,7 +5,7 @@ import Header from "./header";
 import Footer from './footer';
 import "../assets/allStyles.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, loc }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,14 +20,14 @@ const Layout = ({ children }) => {
     <ParallaxProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="bg-container">
-        <div style={{ height: '10vh' }}></div>
+        {/*<div style={{ height: '10vh' }}></div>*/}
         {children}
         <div style={{position: 'sticky', bottom: '0'}}>
           <div className="tri" />
         </div>
       </main>
-      <Parallax y={[-100, 200]}>
-        <Footer />
+      <Parallax y={[-100, 221]}>
+        <Footer loc={loc} />
       </Parallax>
     </ParallaxProvider>
   )
