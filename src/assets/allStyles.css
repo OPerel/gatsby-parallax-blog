@@ -163,6 +163,12 @@ footer p {
   opacity: 0.6;
 }
 
+.content .post-link .grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+
 .content .post-link:last-of-type {
   border-bottom: none;
 }

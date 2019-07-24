@@ -8,7 +8,7 @@ import '../assets/allStyles.css';
 export default ({ pageContext, data }) => {
   // console.log(pageContext.title);
   // console.log(pageContext.post.frontmatter.title);
-  // console.log(data);
+  console.log(data);
   return(
     <Layout>
       <div style={{ height: '10vh' }}></div>
@@ -28,7 +28,7 @@ export default ({ pageContext, data }) => {
 
 export const pageQuery = graphql`
   query ($title: String!) {
-    file(name: {eq: $title}) {
+    file(name: {eq: $title}, relativeDirectory: {eq: "blog-img"}) {
       name
       childImageSharp {
         fluid {

@@ -9,6 +9,7 @@ import '../assets/allStyles.css';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
+  const images = data.allFile.edges;
   return (
     <Layout loc='home'>
       <div className="hero">
@@ -22,11 +23,14 @@ const IndexPage = ({ data }) => {
       <div className="content-wrapper">
         <div className="content">
           {
-            edges.map(post => {
+            edges.map(({ node }) => {
+              const image = images.filter(image => image.node.name === node.frontmatter.title);
+              console.log(image);
               return (
                 <PostLink
-                  key={post.node.id}
-                  postData={post.node}
+                  key={node.id}
+                  postData={node}
+                  image={image[0].node.childImageSharp.fixed}
                 />
               )
             })
@@ -51,6 +55,18 @@ export const query = graphql`{
           slug
         }
         excerpt(format: HTML)
+      }
+    }
+  }
+  allFile(filter: {relativeDirectory: {eq: "blog-img"}}) {
+    edges {
+      node {
+        name
+        childImageSharp {
+          fixed(width: 180, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
       }
     }
   }
