@@ -15,6 +15,11 @@ export default ({ pageContext, data, location }) => {
         />
         <div className="content">
           <div className="post-body">
+            <p
+              dangerouslySetInnerHTML={{
+              __html: pageContext.post.frontmatter.date
+              }}
+            ></p>
             <p dangerouslySetInnerHTML={{ __html: pageContext.post.html }}></p>
           </div>
         </div>

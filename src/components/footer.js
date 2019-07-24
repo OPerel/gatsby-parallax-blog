@@ -16,7 +16,6 @@ class Footer extends Component {
   }
 
   render() {
-    console.log(withController);
     return (
       <footer>
         <Parallax y={["30px", "-100px"]}>
