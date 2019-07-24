@@ -21,12 +21,11 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="bg-container">
         {children}
-        <div className="tri" />
+        <div style={{position: 'sticky', bottom: '0'}}>
+          <div className="tri" />
+        </div>
       </main>
-      <Parallax
-        y={[-60, 165]}
-        styleOuter={{ position: 'relative', zIndex: '1' }}
-      >
+      <Parallax y={[-100, 200]}>
         <Footer />
       </Parallax>
     </ParallaxProvider>
