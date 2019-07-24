@@ -10,27 +10,25 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <div className="index-layout">
-        <div className="hero">
-          <Parallax y={[-500, 500]}>
-            <span style={{margin: '10px'}}>Hello Parallax!</span>
-          </Parallax>
-          <Parallax y={[0, 0]}>
-            <span style={{margin: '10px'}}>Hello Parallax!</span>
-          </Parallax>
-        </div>
-        <div className="posts">
-          {
-            edges.map(post => {
-              return (
-                <PostLink
-                  key={post.node.id}
-                  postData={post.node}
-                />
-              )
-            })
-          }
-        </div>
+      <div className="hero">
+        <Parallax y={[-500, 500]}>
+          <span style={{margin: '10px'}}>Hello Parallax!</span>
+        </Parallax>
+        <Parallax y={[0, 0]}>
+          <span style={{margin: '10px'}}>Hello Parallax!</span>
+        </Parallax>
+      </div>
+      <div className="posts">
+        {
+          edges.map(post => {
+            return (
+              <PostLink
+                key={post.node.id}
+                postData={post.node}
+              />
+            )
+          })
+        }
       </div>
     </Layout>
   )

@@ -19,10 +19,8 @@ const Layout = ({ children }) => {
   return (
     <ParallaxProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main style={{ position: 'relative' }}>
-        <div className="bg-container">
-          {children}
-        </div>
+      <main className="bg-container">
+        {children}
         <div className="tri" />
       </main>
       <Parallax
