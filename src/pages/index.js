@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 import Layout from "../components/layout";
 import PostLink from '../components/postLink';
 // import Footer from '../components/footer'

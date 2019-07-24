@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 // import Footer from '../components/footer'
 import '../assets/allStyles.css'
 
-const SecondPage = () => (
+const About = () => (
     <Layout loc='about'>
       <div style={{ height: '100vh' }}>
         <div className="about">
