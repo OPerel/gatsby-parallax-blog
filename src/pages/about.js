@@ -1,11 +1,12 @@
 import React from "react";
 // import { Link } from "gatsby";
-// import { ParallaxProvider } from 'react-scroll-parallax';
+// import { Parallax } from 'react-scroll-parallax';
 import Layout from "../components/layout";
+// import Footer from '../components/footer'
 import '../assets/allStyles.css'
 
-const About = () => (
-    <Layout>
+const SecondPage = () => (
+    <Layout loc='about'>
       <div style={{ height: '100vh' }}>
         <div className="about">
           <h1>Hello!</h1>
