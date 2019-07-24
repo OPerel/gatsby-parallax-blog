@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
           <span style={{margin: '10px'}}>Hello Parallax!</span>
         </Parallax>
       </div>
-      <div className="posts">
+      <div className="content">
         {
           edges.map(post => {
             return (

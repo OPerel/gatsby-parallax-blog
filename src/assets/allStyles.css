@@ -143,15 +143,14 @@ footer p {
   height: 100vh;
 }
 
-.posts {
+.content {
   width: 70%;
   margin: 10% auto 0;
-  /* border: 0.6px solid; */
   padding: 40px;
   background-color: rgba(35, 35, 35, 0.8)
 }
 
-.posts .post-link {
+.content .post-link {
   width: 65%;
   height: 100px;
   margin: 5% auto;
@@ -161,12 +160,20 @@ footer p {
   opacity: 0.6;
 }
 
-.posts .post-link:last-of-type {
+.content .post-link:last-of-type {
   border-bottom: none;
 }
 
-.posts .post-link a:hover {
+.content .post-link a:hover {
   cursor: pointer;
+}
+
+.content .post-body {
+  width: 75%;
+  margin: 5% auto;
+  padding: 0 0 70px 0;
+  color: white;
+  opacity: 0.6;
 }
 
 .about {
