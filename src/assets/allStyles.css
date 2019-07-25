@@ -83,10 +83,13 @@ header #logo {
 
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
-  min-width: 20%;
-  margin: 0 5% 0 0;
+  min-width: 50%;
+}
+
+header nav a {
+  margin-right: 10%;
 }
 
 footer {
@@ -156,14 +159,14 @@ footer p {
 }
 
 .content-wrapper {
-  width: 65%;
+  width: 85%;
   margin: 10% auto 0;
   background-color: #10202ddb;
   color: #94ada8;
 }
 
 .content {
-  padding: 40px;
+  padding: 10px;
 }
 
 .content .post-link {
@@ -181,6 +184,10 @@ footer p {
 
 .content .post-link a {
   color: #94ada8;
+}
+
+.content .post-link p {
+  margin-bottom: 10px;
 }
 
 .content .post-link .grid {
@@ -202,7 +209,7 @@ footer p {
 }
 
 .content .post-body {
-  width: 75%;
+  width: 85%;
   margin: 5% auto;
   padding: 0 0 70px 0;
 }
@@ -217,6 +224,18 @@ footer p {
 }
 
 @media only screen and (min-width: 770px) {
+  .content-wrapper {
+    width: 65%;
+  }
+
+  .content {
+    padding: 40px;
+  }
+
+  .content .post-link p {
+    margin: 0;
+  }
+
   .content .post-link .grid {
     grid-template-columns: 3fr 1fr;
     grid-column-gap: 2%;
@@ -227,5 +246,9 @@ footer p {
   .content .post-link .grid .post-thumbnail {
     grid-row-start: initial;
     margin: 0;
+  }
+
+  .content .post-body {
+    width: 75%;
   }
 }
