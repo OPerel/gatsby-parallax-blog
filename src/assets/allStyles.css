@@ -105,10 +105,6 @@ footer {
   background-color: #020229;
 }
 
-footer p {
-  margin: 0;
-}
-
 .bg-container {
   position: relative;
   z-index: 2;
@@ -230,10 +226,6 @@ footer p {
 
   .content {
     padding: 40px;
-  }
-
-  .content .post-link p {
-    margin: 0;
   }
 
   .content .post-link .grid {
