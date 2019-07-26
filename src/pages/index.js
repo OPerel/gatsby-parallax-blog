@@ -14,10 +14,10 @@ const IndexPage = ({ data, location }) => {
     <Layout>
       <div className="hero">
         <div>
-          <Parallax y={[-200, 120]}>
+          <Parallax y={[350, -300]}>
             <h1>Welcome!</h1>
           </Parallax>
-          <Parallax y={[-500, 500]}>
+          <Parallax y={[-480, 480]}>
             <h3>This is my cool parallax blog.</h3>
           </Parallax>
         </div>
@@ -29,7 +29,7 @@ const IndexPage = ({ data, location }) => {
               edges.map(({ node }, idx) => {
                 const image = images.filter(image => image.node.name === node.frontmatter.title);
                 return (
-                  <Parallax key={node.id} y={[70, -70]} styleOuter={{ borderBottom: idx < edges.length - 1 ? 'solid 0.5px' : null }}>
+                  <Parallax key={node.id} y={[70, -70]}>
                     <PostLink
                       key={node.id}
                       postData={node}
