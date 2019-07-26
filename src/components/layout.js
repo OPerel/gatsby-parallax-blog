@@ -26,7 +26,7 @@ const Layout = ({ children, location }) => {
           <div className="tri" />
         </div>
       </main>
-      <Parallax y={[-100, 221]} styleOuter={{zIndex: '2'}}>
+      <Parallax y={[-100, 221]}>
         <Footer />
       </Parallax>
     </>

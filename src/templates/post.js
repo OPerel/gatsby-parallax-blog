@@ -33,7 +33,7 @@ export const pageQuery = graphql`
     file(name: {eq: $title}, relativeDirectory: {eq: "blog-img"}) {
       name
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 500, maxHeight: 200) {
           ...GatsbyImageSharpFluid
         }
       }

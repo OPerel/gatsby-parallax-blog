@@ -1,5 +1,6 @@
 html {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: 'Muli', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif;
@@ -13,8 +14,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
+  /* font-family: georgia, serif; */
+  font-family: 'Muli', sans-serif;
+  /* font-weight: normal; */
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -44,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
+  font-weight: 300;
 }
 
 header {
@@ -150,6 +153,10 @@ footer {
   height: 100vh;
   text-align: center;
   font-size: 1.8rem;
+}
+
+.hero h3 {
+  font-weight: 300;
 }
 
 .content-wrapper {
