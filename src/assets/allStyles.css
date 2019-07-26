@@ -21,11 +21,11 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  color: white;
+  color: #a4ecff;
 }
 
 a {
-  color: white;
+  color: #a4ecff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -33,10 +33,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-h1 {
-  font-size: 2.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,9 +89,9 @@ header nav a {
 }
 
 footer {
-  /* position: absolute;
+  /* position: relative;
   bottom: 0;
-  z-index: 1; */
+  z-index: 2; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -152,6 +148,8 @@ footer {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  text-align: center;
+  font-size: 1.8rem;
 }
 
 .content-wrapper {
@@ -168,8 +166,7 @@ footer {
 .content .post-link {
   width: 85%;
   margin: 5% auto;
-  padding: 0 0 20px 0;
-  border-bottom: solid 0.5px #94ada8;
+  /* border-bottom: solid 0.5px #94ada8; */
 }
 
 .content .post-link h2 {
