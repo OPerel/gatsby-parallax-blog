@@ -22,26 +22,24 @@ const IndexPage = ({ data, location }) => {
           </Parallax>
         </div>
       </div>
-      {/*<Parallax y={[80, -30]}>*/}
-        <div className="content-wrapper">
-          <div className="content">
-            {
-              edges.map(({ node }, idx) => {
-                const image = images.filter(image => image.node.name === node.frontmatter.title);
-                return (
-                  <Parallax key={node.id} y={[80, -80]}>
-                    <PostLink
-                      key={node.id}
-                      postData={node}
-                      image={image[0].node.childImageSharp.fixed}
-                    />
-                  </Parallax>
-                )
-              })
-            }
-          </div>
+      <div className="content-wrapper">
+        <div className="content">
+          {
+            edges.map(({ node }, idx) => {
+              const image = images.filter(image => image.node.name === node.frontmatter.title);
+              return (
+                <Parallax key={node.id} y={[80, -80]}>
+                  <PostLink
+                    key={node.id}
+                    postData={node}
+                    image={image[0].node.childImageSharp.fixed}
+                  />
+                </Parallax>
+              )
+            })
+          }
         </div>
-      {/*</Parallax>*/}
+      </div>
     </Layout>
   )
 }
