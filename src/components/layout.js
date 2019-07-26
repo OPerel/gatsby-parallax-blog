@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 import Header from "./header";
 import Footer from './footer';
 import "../assets/allStyles.css"
@@ -18,7 +18,7 @@ const Layout = ({ children, location }) => {
 
   // console.log('layout', location);
   return (
-    <ParallaxProvider>
+    <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="bg-container">
         {children}
@@ -29,7 +29,7 @@ const Layout = ({ children, location }) => {
       <Parallax y={[-100, 221]}>
         <Footer location={location} />
       </Parallax>
-    </ParallaxProvider>
+    </>
   )
 }
 
