@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Parallax } from 'react-scroll-parallax';
 import Header from "./header";
 import Footer from './footer';
 import "../assets/allStyles.css"
@@ -26,9 +25,7 @@ const Layout = ({ children, location }) => {
           <div className="tri" />
         </div>
       </main>
-      <Parallax y={[-100, 221]}>
-        <Footer />
-      </Parallax>
+      <Footer />
     </>
   )
 }
