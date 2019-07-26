@@ -141,15 +141,27 @@ footer {
   border-color: transparent #080821 transparent transparent;
 }
 
-/* .tri::before,
-.tri::after {
-  clear: both;
-} */
+.hero-tri {
+  border-style: solid;
+  opacity: 0.4;
+}
+
+.tri-one {
+  transform: translateX(-60%);
+  border-width: 220px 150px 0 0;
+  border-color: transparent #a4ecff transparent transparent;
+}
+
+.tri-two {
+  transform: translateX(-55%);
+  border-width: 220px 150px 0 0;
+  border-color: transparent #7b7228 transparent transparent;
+}
 
 .hero {
-  display: flex;
-  justify-content: center;
+  display: grid;
   align-items: center;
+  grid-template-columns: 10% 15% 1fr 20% 5%;
   height: 100vh;
   text-align: center;
   font-size: 1.8rem;
