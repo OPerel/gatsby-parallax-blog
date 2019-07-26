@@ -18,8 +18,7 @@ export default ({ pageContext, data }) => {
             }}
           ></p>
           <div className="post-img" style={{ backgroundImage: `url(${publicURL})`}} />
-          <div className="post-body">
-            <p dangerouslySetInnerHTML={{ __html: pageContext.post.html }}></p>
+          <div className="post-body" dangerouslySetInnerHTML={{ __html: pageContext.post.html }}>
           </div>
         </div>
       </div>

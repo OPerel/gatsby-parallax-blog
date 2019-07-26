@@ -110,13 +110,13 @@ footer {
   background-image: url('../images/bg1.gif');
   background-size: contain;
   background-blend-mode: overlay;
-  background-color: #00000094;
+  background-color: #00000084;
 }
 
 .bg-container::before,
 .bg-container::after {
   background-blend-mode: overlay;
-  background-color: #00000094;
+  background-color: #00000084;
 }
 
 /* @keyframes triangle {
