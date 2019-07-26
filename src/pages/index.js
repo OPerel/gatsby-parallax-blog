@@ -28,7 +28,7 @@ const IndexPage = ({ data, location }) => {
             edges.map(({ node }, idx) => {
               const image = images.filter(image => image.node.name === node.frontmatter.title);
               return (
-                <Parallax key={node.id} y={[80, -80]}>
+                <Parallax key={node.id} y={[100, -140 ]}>
                   <PostLink
                     key={node.id}
                     postData={node}
