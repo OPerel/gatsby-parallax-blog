@@ -21,7 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
         edges {
           node {
             fields {
@@ -46,13 +46,17 @@ exports.createPages = async ({ graphql, actions }) => {
   const { edges } = result.data.allMarkdownRemark;
 
   const postTemplate = path.resolve(`./src/templates/post.js`);
-  edges.forEach(edge => {
+  edges.forEach((edge, idx) => {
+    const prev = idx === 0 ? null : edges[idx - 1].node
+    const next = idx === edges.length - 1 ? null : edges[idx + 1].node
     createPage({
       path: edge.node.fields.slug,
       component: slash(postTemplate),
       context: {
         post: edge.node,
-        title: edge.node.frontmatter.title
+        title: edge.node.frontmatter.title,
+        prev,
+        next
       }
     })
   })

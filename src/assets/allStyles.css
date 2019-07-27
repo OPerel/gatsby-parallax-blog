@@ -92,9 +92,6 @@ header nav a {
 }
 
 footer {
-  /* position: relative;
-  bottom: 0;
-  z-index: 2; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -221,7 +218,14 @@ footer {
 .content .post-body {
   width: 85%;
   margin: 5% auto;
-  padding: 0 0 70px 0;
+}
+
+.content .post-nav {
+  display: flex;
+  justify-content: space-around;
+  max-width: 50%;
+  height: 10vh;
+  margin: 8% auto;
 }
 
 .about {

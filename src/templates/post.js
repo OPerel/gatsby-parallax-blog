@@ -1,11 +1,12 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import '../assets/allStyles.css';
 
 export default ({ pageContext, data }) => {
   const { publicURL } = data.file;
+  const { prev, next } = pageContext;
   return(
     <Layout>
       <div style={{ height: '10vh' }}></div>
@@ -19,6 +20,18 @@ export default ({ pageContext, data }) => {
           ></p>
           <div className="post-img" style={{ backgroundImage: `url(${publicURL})`}} />
           <div className="post-body" dangerouslySetInnerHTML={{ __html: pageContext.post.html }}>
+          </div>
+          <div className="post-nav">
+            {next && (
+              <div>
+                <Link to={next.fields.slug}><span>Previous</span></Link>
+              </div>
+            )}
+            {prev && (
+              <div>
+                <Link to={prev.fields.slug}><span>Next</span></Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
