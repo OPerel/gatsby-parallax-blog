@@ -53,7 +53,7 @@ class Header extends React.Component {
                   </p>
                 </div>
                 <nav>
-                  <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Home</Link>
+                  <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Blog</Link>
                   <Link to='/about' activeStyle={{ textDecoration: 'underline' }}>About Me</Link>
                 </nav>
               </header>

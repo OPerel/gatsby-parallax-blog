@@ -8,7 +8,7 @@ const PostNav = ({ prev, next }) => {
       {next && (
         <div className="arrow-link">
           <Link to={next.fields.slug}>
-            <i className="fas fa-angle-left"></i>
+            <i className="far fa-arrow-alt-circle-left"></i>
             <span>Previous</span>
           </Link>
         </div>
@@ -16,7 +16,7 @@ const PostNav = ({ prev, next }) => {
       {prev && (
         <div className="arrow-link">
           <Link to={prev.fields.slug}>
-            <i className="fas fa-angle-right"></i>
+            <i className="far fa-arrow-alt-circle-right"></i>
             <span>Next</span>
           </Link>
         </div>
