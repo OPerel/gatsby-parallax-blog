@@ -70,6 +70,7 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link href="https://fonts.googleapis.com/css?family=Muli:300,600&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     </Helmet>
   )
 }

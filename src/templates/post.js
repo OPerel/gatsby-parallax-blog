@@ -23,13 +23,19 @@ export default ({ pageContext, data }) => {
           </div>
           <div className="post-nav">
             {next && (
-              <div>
-                <Link to={next.fields.slug}><span>Previous</span></Link>
+              <div className="arrow-link">
+                <Link to={next.fields.slug}>
+                  <i className="material-icons">arrow_back_ios</i>
+                  <span>Previous</span>
+                </Link>
               </div>
             )}
             {prev && (
-              <div>
-                <Link to={prev.fields.slug}><span>Next</span></Link>
+              <div className="arrow-link">
+                <Link to={prev.fields.slug}>
+                  <span>Next</span>
+                  <i className="material-icons">arrow_forward_ios</i>
+                </Link>
               </div>
             )}
           </div>

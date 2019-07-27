@@ -35,6 +35,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #2cccd8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -226,6 +227,16 @@ footer {
   max-width: 50%;
   height: 10vh;
   margin: 8% auto;
+}
+
+.content .post-nav .arrow-link {
+  width: 100%;
+  text-align: center;
+}
+
+.content .post-nav .arrow-link .material-icons {
+  vertical-align: bottom;
+  margin: 0 2%;
 }
 
 .about {
