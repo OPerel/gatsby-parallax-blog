@@ -27,40 +27,25 @@ class Header extends React.Component {
   render () {
     const { scrollPos } = this.state;
     return (
-      <StaticQuery
-        query={graphql`{
-          icon: file(relativePath:{eq: "favicon.png"}) {
-            childImageSharp {
-              fixed (width: 60, height: 60) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }`}
-        render={data => {
-          return (
-            <>
-              <SEO title={this.props.siteTitle} />
-              <header
-                style={{
-                  background: scrollPos < 400 ? `transparent` : `#222222`
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-                  <div id='logo'></div>
-                  <p style={{ margin: 0 }}>
-                    {this.props.siteTitle}
-                  </p>
-                </div>
-                <nav>
-                  <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Blog</Link>
-                  <Link to='/about' activeStyle={{ textDecoration: 'underline' }}>About Me</Link>
-                </nav>
-              </header>
-            </>
-          )
-        }}
-      />
+      <>
+        <SEO title={this.props.siteTitle} />
+        <header
+          style={{
+            background: scrollPos < 400 ? `transparent` : `#222222`
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+            <div id='logo'></div>
+            <p style={{ margin: 0 }}>
+              {this.props.siteTitle}
+            </p>
+          </div>
+          <nav>
+            <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Blog</Link>
+            <Link to='/about' activeStyle={{ textDecoration: 'underline' }}>About Me</Link>
+          </nav>
+        </header>
+      </>
     )
   }
 }
