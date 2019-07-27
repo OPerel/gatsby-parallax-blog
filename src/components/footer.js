@@ -2,11 +2,23 @@ import React from 'react';
 
 const Footer = () => (
   <footer>
-    <p>My G-Blog</p>
-    <p>
-      © {new Date().getFullYear()}, Built with{" "}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </p>
+    <div className="footer-wrapper">
+      <div className="footer-info">
+        <h5>Parallax Blog</h5>
+        <p>© {new Date().getFullYear()}, By Ori Perelman</p>
+      </div>
+      <div className="contact">
+        <a href="mailto: oriperelman@gmail.com" target="_blank" rel="noopener noreferrer">
+          <i className="far fa-envelope"></i>
+          <span>Drop a line.</span>
+        </a>
+        <a href="https://github.com/OPerel" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github"></i>
+          <span>Source and other projects.</span>
+        </a>
+      </div>
+    </div>
+    <div className="footer-tri" />
   </footer>
 )
 

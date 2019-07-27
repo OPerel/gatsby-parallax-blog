@@ -25,7 +25,7 @@ export default ({ pageContext, data }) => {
             {next && (
               <div className="arrow-link">
                 <Link to={next.fields.slug}>
-                  <i className="material-icons">arrow_back_ios</i>
+                  <i className="fas fa-angle-left"></i>
                   <span>Previous</span>
                 </Link>
               </div>
@@ -33,8 +33,8 @@ export default ({ pageContext, data }) => {
             {prev && (
               <div className="arrow-link">
                 <Link to={prev.fields.slug}>
+                  <i className="fas fa-angle-right"></i>
                   <span>Next</span>
-                  <i className="material-icons">arrow_forward_ios</i>
                 </Link>
               </div>
             )}

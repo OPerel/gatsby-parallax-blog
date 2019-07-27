@@ -93,13 +93,50 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   height: 45vh;
-  background-color: #020229;
+  display: flex;
+  align-items: center;
+  background-color: #000026;
+}
+
+footer h5 {
+  margin-bottom: 0.3rem;
+  font-size: 1em;
+}
+
+footer p {
+  font-size: 0.85rem;
+}
+
+footer .footer-tri {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 38vh 100vw 0 0;
+  border-color: transparent #372109b3 transparent transparent;
+}
+
+footer .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 85%;
+}
+
+footer .footer-info, footer .contact {
+  width: 50%;
+  z-index: 4;
+}
+
+footer .contact a {
+  display: block;
+}
+
+footer .contact a i {
+  margin: 0 5% 0 0;
+  font-size: 1.3rem;
 }
 
 .bg-container {
@@ -137,13 +174,8 @@ footer {
   height: 0;
   border-style: solid;
   border-width: 120px 100vw 75px 0;
-  border-color: transparent #080821 transparent transparent;
+  border-color: transparent #101027 transparent transparent;
 }
-
-/* .tri::before,
-.tri::after {
-  clear: both;
-} */
 
 .hero {
   display: flex;
@@ -230,14 +262,14 @@ footer {
   margin: 8% auto;
 }
 
-.content .post-nav .arrow-link {
-  width: 100%;
-  text-align: center;
+.content .post-nav .arrow-link a:hover {
+  text-decoration: none;
 }
 
-.content .post-nav .arrow-link .material-icons {
-  vertical-align: bottom;
-  margin: 0 2%;
+.content .post-nav .arrow-link .fas {
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .about {
@@ -250,6 +282,10 @@ footer {
 }
 
 @media only screen and (min-width: 770px) {
+  footer .footer-wrapper {
+    width: 65%;
+  }
+
   .content-wrapper {
     width: 65%;
   }
