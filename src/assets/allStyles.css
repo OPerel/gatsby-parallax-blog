@@ -1,5 +1,4 @@
 html {
-  /* font-family: sans-serif; */
   font-family: 'Muli', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -14,9 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  /* font-family: georgia, serif; */
   font-family: 'Muli', sans-serif;
-  /* font-weight: normal; */
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -93,6 +90,9 @@ header nav a {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -105,6 +105,7 @@ footer {
 .bg-container {
   position: relative;
   z-index: 2;
+  margin-bottom: 44vh;
   background-image: url('../images/bg1.gif');
   background-size: contain;
   background-blend-mode: overlay;

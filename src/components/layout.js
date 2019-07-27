@@ -17,7 +17,7 @@ const Layout = ({ children, location }) => {
 
   // console.log('layout', location);
   return (
-    <>
+    <div style={{ position: 'relative' }}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="bg-container">
         {children}
@@ -26,7 +26,7 @@ const Layout = ({ children, location }) => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
