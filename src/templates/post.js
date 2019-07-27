@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import PostNav from '../components/postNav';
 import '../assets/allStyles.css';
 
 export default ({ pageContext, data }) => {
@@ -17,28 +18,10 @@ export default ({ pageContext, data }) => {
             dangerouslySetInnerHTML={{
             __html: pageContext.post.frontmatter.date
             }}
-          ></p>
+          />
           <div className="post-img" style={{ backgroundImage: `url(${publicURL})`}} />
-          <div className="post-body" dangerouslySetInnerHTML={{ __html: pageContext.post.html }}>
-          </div>
-          <div className="post-nav">
-            {next && (
-              <div className="arrow-link">
-                <Link to={next.fields.slug}>
-                  <i className="fas fa-angle-left"></i>
-                  <span>Previous</span>
-                </Link>
-              </div>
-            )}
-            {prev && (
-              <div className="arrow-link">
-                <Link to={prev.fields.slug}>
-                  <i className="fas fa-angle-right"></i>
-                  <span>Next</span>
-                </Link>
-              </div>
-            )}
-          </div>
+          <div className="post-body" dangerouslySetInnerHTML={{ __html: pageContext.post.html }} />
+          <PostNav prev={prev} next={next} />
         </div>
       </div>
     </Layout>
