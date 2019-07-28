@@ -13,7 +13,9 @@ const IndexPage = ({ data, location }) => {
   return (
     <Layout>
       <div className="hero">
-        <div />
+      <Parallax y={[-700, 300]}>
+        <div className="hero-tri tri-four"></div>
+      </Parallax>
         <Parallax y={[-30, 135]}>
           <div className="hero-tri tri-one"></div>
         </Parallax>
@@ -25,7 +27,7 @@ const IndexPage = ({ data, location }) => {
             <h3>This is my cool parallax blog.</h3>
           </Parallax>
         </div>
-        <Parallax y={[-200, 100]}>
+        <Parallax y={[-140, 180]}>
           <div className="hero-tri tri-two"></div>
         </Parallax>
         <div />

@@ -92,9 +92,6 @@ header nav a {
 }
 
 footer {
-  /* position: relative;
-  bottom: 0;
-  z-index: 2; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -141,21 +138,74 @@ footer {
   border-color: transparent #080821 transparent transparent;
 }
 
+@keyframes float1 {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(20px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translateY(40px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(40px);
+  }
+}
+
 .hero-tri {
   border-style: solid;
   opacity: 0.4;
 }
 
 .tri-one {
-  transform: translateX(-60%);
-  border-width: 220px 150px 0 0;
-  border-color: transparent #a4ecff transparent transparent;
+  animation: float1 4s infinite;
+  border-width: 230px 150px 40px 0;
+  border-color: transparent #c3ffa4 transparent transparent;
 }
 
 .tri-two {
-  transform: translateX(-55%);
-  border-width: 220px 150px 0 0;
-  border-color: transparent #7b7228 transparent transparent;
+  animation: float2 4s infinite;
+  width: 50px;
+  transform: rotate(196deg);
+  border-width: 220px 50px 0 0;
+  border-color: transparent #7b7228 #7b7228 transparent;
+}
+
+
+
+.tri-four {
+  animation: float3 4s infinite;
+  transform: rotate(230deg);
+  border-width: 40px 80px 20px 0;
+  border-color: transparent #6e3f11 transparent transparent;
 }
 
 .hero {
