@@ -29,7 +29,7 @@ class Header extends React.Component {
         <SEO title={this.props.siteTitle} />
         <header
           style={{
-            background: scrollPos < 300 ? `transparent` : `#222222`
+            background: scrollPos < 100 ? `transparent` : `#222222`
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
