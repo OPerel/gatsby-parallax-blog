@@ -1,4 +1,4 @@
-# My G-Blog  
+# My Parallax Blog  
 ### Simple elegant blog using [GatsbyJS](www.gatsbyjs.org)
 #### This website was made using:  
 
@@ -6,3 +6,5 @@
 * [Pattern Library](http://thepatternlibrary.com/)
 * [Hero Patterns](https://www.heropatterns.com/)
 * [The SVG Repo](https://www.svgrepo.com/)
+
+#### Check it out: (https://gatsby-parallax-blog.netlify.com/)
