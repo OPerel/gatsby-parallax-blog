@@ -60,11 +60,12 @@ header {
 }
 
 header #logo {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   margin: 0 5%;
   background-image: url('../images/logo.svg');
   background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 50%;
 }
 
@@ -258,15 +259,43 @@ footer .contact a i {
 }
 
 .about {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 75%;
-  height: 60vh;
+  align-items: center;
+  width: 85%;
   margin: 0 auto;
+  padding: 45% 0;
+}
+
+.about .about-head {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.3rem;
+}
+
+.about .about-head h2 {
+  margin-right: 5%;
+  font: 1.8rem;
+}
+
+.about #my-photo {
+  width: 180px;
+  height: 180px;
+  margin: 2%;
+  float: right;
+  border-radius: 50%;
+  background-image: url('../images/me.jpg');
+  background-position: 65%;
+  background-size: 200%;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 770px) {
+  header #logo {
+    width: 80px;
+    height: 80px;
+  }
+
   footer .footer-wrapper {
     width: 65%;
   }
@@ -289,5 +318,16 @@ footer .contact a i {
 
   .content .post-body {
     width: 75%;
+  }
+
+  .about {
+    width: 65%;
+    height: 100vh;
+    padding: 0;
+  }
+
+  .about #my-photo {
+    width: 220px;
+    height: 220px;
   }
 }
