@@ -8,7 +8,7 @@ const Footer = () => (
         <p>© {new Date().getFullYear()}, By Ori Perelman</p>
       </div>
       <div className="contact">
-        <a href="mailto: oriperelman@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto: oriperelman@gmail.com">
           <i className="far fa-envelope"></i>
           <span>Drop a line.</span>
         </a>

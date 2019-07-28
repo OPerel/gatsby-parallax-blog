@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import '../assets/allStyles.css'
 
 const About = () => (
-  <Layout>
+  <Layout pageTitle="About Me">
     <div className="about">
       <div>
 

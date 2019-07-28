@@ -26,7 +26,7 @@ const IndexPage = ({ data, location }) => {
         <div className="content">
           {
             edges.map(({ node }, idx) => {
-              const image = images.filter(image => image.node.name === node.frontmatter.title);
+              const image = images.filter(image => image.node.name === node.frontmatter.image);
               return (
                 <Parallax key={node.id} y={[100, -140 ]}>
                   <PostLink
@@ -53,6 +53,7 @@ export const query = graphql`{
           author
           date
           title
+          image
         }
         fields {
           slug

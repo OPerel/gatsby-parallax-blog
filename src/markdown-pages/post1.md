@@ -1,7 +1,8 @@
 ---
-title: 'post1'
+title: 'Post #1'
 author: 'Me'
 date: '2019-7-12'
+image: 'post1'
 ---
 
 ## My First Blog Post

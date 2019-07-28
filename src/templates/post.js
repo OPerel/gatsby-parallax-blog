@@ -9,7 +9,7 @@ export default ({ pageContext, data }) => {
   const { publicURL } = data.file;
   const { prev, next } = pageContext;
   return(
-    <Layout>
+    <Layout pageTitle={pageContext.post.frontmatter.title}>
       <div style={{ height: '10vh' }}></div>
       <div className="content-wrapper">
         <div className="content" style={{ backgroundAttachment: 'fixed' }}>
@@ -29,8 +29,8 @@ export default ({ pageContext, data }) => {
 }
 
 export const pageQuery = graphql`
-  query ($title: String!) {
-    file(name: {eq: $title}, relativeDirectory: {eq: "blog-img"}) {
+  query ($image: String!) {
+    file(name: {eq: $image}, relativeDirectory: {eq: "blog-img"}) {
       name
       publicURL
     }

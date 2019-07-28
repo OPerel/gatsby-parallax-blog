@@ -1,7 +1,8 @@
 ---
-title: 'post4'
+title: 'Post #4'
 author: 'Me'
 date: '2019-7-25'
+image: 'post4'
 ---
 
 ## My Forth Blog Post

@@ -31,6 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
               author
               date
               title
+              image
             }
             html
           }
@@ -54,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: slash(postTemplate),
       context: {
         post: edge.node,
-        title: edge.node.frontmatter.title,
+        image: edge.node.frontmatter.image,
         prev,
         next
       }

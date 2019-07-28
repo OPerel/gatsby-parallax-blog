@@ -26,7 +26,7 @@ class Header extends React.Component {
     const { scrollPos } = this.state;
     return (
       <>
-        <SEO title={this.props.siteTitle} />
+        <SEO pageTitle={this.props.pageTitle} />
         <header
           style={{
             background: scrollPos < 100 ? `transparent` : `#222222`
