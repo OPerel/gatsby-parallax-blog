@@ -18,14 +18,14 @@ function SEO({ pageTitle }) {
     `
   )
 
-  const title = pageTitle ? pageTitle : site.siteMetadata.title;
+  const { title } = site.siteMetadata;
   const metaDescription = site.siteMetadata.description
 
   return (
     <Helmet
       htmlAttributes={{ lang: 'en' }}
       title={title}
-      titleTemplate={pageTitle ? `${site.siteMetadata.title} | %s` : ''}
+      titleTemplate={pageTitle ? `%s | ${pageTitle}` : ''}
       meta={[
         {
           name: `description`,
