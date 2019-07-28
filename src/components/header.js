@@ -1,8 +1,15 @@
-import { Link, graphql, StaticQuery } from "gatsby";
-// import Img from 'gatsby-image';
-import React from "react";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import SEO from './seo';
-// import bgImg from '../images/favicon.png'
+import Nav from './nav'
+
+const query = graphql`{
+  site {
+    siteMetadata {
+      title
+    }
+  }
+}`
 
 class Header extends React.Component {
   constructor (props) {
@@ -28,34 +35,24 @@ class Header extends React.Component {
     const { scrollPos } = this.state;
     return (
       <StaticQuery
-        query={graphql`{
-          icon: file(relativePath:{eq: "favicon.png"}) {
-            childImageSharp {
-              fixed (width: 60, height: 60) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }`}
+        query={query}
         render={data => {
           return (
             <>
-              <SEO title={this.props.siteTitle} />
+              <SEO pageTitle={this.props.pageTitle} />
               <header
                 style={{
-                  background: scrollPos < 400 ? `transparent` : `#222222`
+                  background: scrollPos < 100 ? `transparent` : `#222222`
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
                   <div id='logo'></div>
-                  <p style={{ margin: 0 }}>
-                    {this.props.siteTitle}
-                  </p>
+                  <h1
+                    dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.title }}
+                    style={{ margin: 0 }}
+                  />
                 </div>
-                <nav>
-                  <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Home</Link>
-                  <Link to='/about' activeStyle={{ textDecoration: 'underline' }}>About Me</Link>
-                </nav>
+                <Nav />
               </header>
             </>
           )

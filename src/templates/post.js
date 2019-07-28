@@ -1,13 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
+import BgImage from 'gatsby-background-image';
 import Layout from '../components/layout';
+import PostNav from '../components/postNav';
 import '../assets/allStyles.css';
 
 export default ({ pageContext, data }) => {
-  const { publicURL } = data.file;
+  const { fluid } = data.file.childImageSharp;
+  const { prev, next } = pageContext;
   return(
-    <Layout>
+    <Layout pageTitle={pageContext.post.frontmatter.title}>
       <div style={{ height: '10vh' }}></div>
       <div className="content-wrapper">
         <div className="content" style={{ backgroundAttachment: 'fixed' }}>
@@ -16,11 +18,14 @@ export default ({ pageContext, data }) => {
             dangerouslySetInnerHTML={{
             __html: pageContext.post.frontmatter.date
             }}
-          ></p>
-          <div className="post-img" style={{ backgroundImage: `url(${publicURL})`}} />
-          <div className="post-body">
-            <p dangerouslySetInnerHTML={{ __html: pageContext.post.html }}></p>
-          </div>
+          />
+          <BgImage
+            fluid={fluid}
+            className="post-img"
+            style={{ backgroundAttachment: 'fixed' }}
+          />
+          <div className="post-body" dangerouslySetInnerHTML={{ __html: pageContext.post.html }} />
+          <PostNav prev={prev} next={next} />
         </div>
       </div>
     </Layout>
@@ -28,10 +33,13 @@ export default ({ pageContext, data }) => {
 }
 
 export const pageQuery = graphql`
-  query ($title: String!) {
-    file(name: {eq: $title}, relativeDirectory: {eq: "blog-img"}) {
-      name
-      publicURL
+  query ($image: String!) {
+    file(name: {eq: $image}, relativeDirectory: {eq: "blog-img"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `

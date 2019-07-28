@@ -1,33 +1,20 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import Footer from './footer';
 import "../assets/allStyles.css"
 
-const Layout = ({ children, location }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  // console.log('layout', location);
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="bg-container">
+const Layout = ({ children, pageTitle }) => (
+  <div style={{ position: 'relative' }}>
+    <Header pageTitle={pageTitle} />
+    <main className="bg-container">
         {children}
-        <div style={{position: 'sticky', bottom: '0'}}>
-          <div className="tri" />
-        </div>
-      </main>
-      <Footer />
-    </>
-  )
-}
+      <div style={{position: 'sticky', bottom: '0'}}>
+        <div className="tri" />
+      </div>
+    </main>
+    <Footer />
+  </div>
+)
 
-export default Layout
+
+export default Layout;
