@@ -1,4 +1,4 @@
-# My G-Blog  
+# My Parallax Blog  
 ### Simple elegant blog using [GatsbyJS](www.gatsbyjs.org)
 #### This website was made using:  
 
