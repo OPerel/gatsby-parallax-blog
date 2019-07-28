@@ -68,6 +68,10 @@ header #logo {
   border-radius: 50%;
 }
 
+header h1 {
+  font-size: 1.3rem;
+}
+
 header nav {
   display: flex;
   justify-content: flex-end;

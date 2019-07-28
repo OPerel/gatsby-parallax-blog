@@ -1,8 +1,6 @@
-import { Link, graphql, StaticQuery } from "gatsby";
-// import Img from 'gatsby-image';
-import React from "react";
+import React from 'react';
+import { Link } from 'gatsby';
 import SEO from './seo';
-// import bgImg from '../images/favicon.png'
 
 class Header extends React.Component {
   constructor (props) {
@@ -31,14 +29,14 @@ class Header extends React.Component {
         <SEO title={this.props.siteTitle} />
         <header
           style={{
-            background: scrollPos < 400 ? `transparent` : `#222222`
+            background: scrollPos < 300 ? `transparent` : `#222222`
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
             <div id='logo'></div>
-            <p style={{ margin: 0 }}>
+            <h1 style={{ margin: 0 }}>
               {this.props.siteTitle}
-            </p>
+            </h1>
           </div>
           <nav>
             <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Blog</Link>
