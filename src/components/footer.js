@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="footer-wrapper">
       <div className="footer-info">
         <h5>Parallax Blog</h5>
-        <p>© {new Date().getFullYear()}, By Ori Perelman</p>
+        <span style={{ fontSize: '0.85rem' }}>© {new Date().getFullYear()}, By Ori Perelman</span>
       </div>
       <div className="contact">
         <a href="mailto: oriperelman@gmail.com">

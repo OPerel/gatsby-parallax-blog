@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
+  color: #94ada8;
   font-weight: 300;
 }
 
@@ -97,10 +98,6 @@ footer {
 footer h5 {
   margin-bottom: 0.3rem;
   font-size: 1em;
-}
-
-footer p {
-  font-size: 0.85rem;
 }
 
 footer .footer-tri {

@@ -23,6 +23,7 @@ function SEO({ pageTitle }) {
 
   return (
     <Helmet
+      htmlAttributes={{ lang: 'en' }}
       title={title}
       titleTemplate={pageTitle ? `${site.siteMetadata.title} | %s` : ''}
       meta={[
@@ -52,7 +53,7 @@ function SEO({ pageTitle }) {
 
 SEO.propTypes = {
   description: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO;
