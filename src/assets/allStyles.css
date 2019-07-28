@@ -138,13 +138,13 @@ footer .contact a i {
   background-image: url('../images/bg1.gif');
   background-size: contain;
   background-blend-mode: overlay;
-  background-color: #00000084;
+  background-color: #00000035;
 }
 
 .bg-container::before,
 .bg-container::after {
   background-blend-mode: overlay;
-  background-color: #00000084;
+  background-color: #00000035;
 }
 
 .tri {
@@ -283,6 +283,17 @@ footer .contact a i {
 
   footer .footer-wrapper {
     width: 65%;
+  }
+
+  .bg-container {
+    background-blend-mode: overlay;
+    background-color: #00000084;
+  }
+
+  .bg-container::before,
+  .bg-container::after {
+    background-blend-mode: overlay;
+    background-color: #00000084;
   }
 
   .hero {
