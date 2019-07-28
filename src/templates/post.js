@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
+import BgImage from 'gatsby-background-image';
 import Layout from '../components/layout';
 import PostNav from '../components/postNav';
 import '../assets/allStyles.css';
 
 export default ({ pageContext, data }) => {
-  const { publicURL } = data.file;
+  const { fluid } = data.file.childImageSharp;
   const { prev, next } = pageContext;
   return(
     <Layout pageTitle={pageContext.post.frontmatter.title}>
@@ -19,7 +19,11 @@ export default ({ pageContext, data }) => {
             __html: pageContext.post.frontmatter.date
             }}
           />
-          <div className="post-img" style={{ backgroundImage: `url(${publicURL})`}} />
+          <BgImage
+            fluid={fluid}
+            className="post-img"
+            style={{ backgroundAttachment: 'fixed' }}
+          />
           <div className="post-body" dangerouslySetInnerHTML={{ __html: pageContext.post.html }} />
           <PostNav prev={prev} next={next} />
         </div>
@@ -31,8 +35,11 @@ export default ({ pageContext, data }) => {
 export const pageQuery = graphql`
   query ($image: String!) {
     file(name: {eq: $image}, relativeDirectory: {eq: "blog-img"}) {
-      name
-      publicURL
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `
