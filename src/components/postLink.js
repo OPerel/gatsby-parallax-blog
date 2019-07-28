@@ -3,8 +3,7 @@ import { Link } from "gatsby";
 import Img from 'gatsby-image';
 import '../assets/allStyles.css';
 
-const PostLink = ({ postData, image }) => {
-  return (
+const PostLink = ({ postData, image }) => (
   <div className="post-link">
     <p dangerouslySetInnerHTML={{ __html: postData.frontmatter.date }}></p>
     <Link to={postData.fields.slug}>
@@ -16,6 +15,5 @@ const PostLink = ({ postData, image }) => {
     </Link>
   </div>
 )
-}
 
 export default PostLink;

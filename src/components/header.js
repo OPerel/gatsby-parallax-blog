@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import SEO from './seo';
+import Nav from './nav'
 
 const query = graphql`{
   site {
@@ -46,14 +47,12 @@ class Header extends React.Component {
               >
                 <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
                   <div id='logo'></div>
-                  <h1 style={{ margin: 0 }}>
-                    {data.site.siteMetadata.title}
-                  </h1>
+                  <h1
+                    dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.title }}
+                    style={{ margin: 0 }}
+                  />
                 </div>
-                <nav>
-                  <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Blog</Link>
-                  <Link to='/about' activeStyle={{ textDecoration: 'underline' }}>About Me</Link>
-                </nav>
+                <Nav />
               </header>
             </>
           )
