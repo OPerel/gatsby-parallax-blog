@@ -1,4 +1,4 @@
-# My Parallax Blog  
+# Gatsby Parallax Blog  
 ### Simple elegant blog using [GatsbyJS](www.gatsbyjs.org)
 #### This website was made using:  
 
