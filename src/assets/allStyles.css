@@ -161,43 +161,43 @@ footer .contact a i {
 
 @keyframes float1 {
   0% {
-    transform: translateY(-30px);
+    transform: translateY(-70px);
   }
 
   50% {
-    transform: translateY(30px);
+    transform: translateY(0);
   }
 
   100% {
-    transform: translateY(-30px);
+    transform: translateY(-70px);
   }
 }
 
 @keyframes float2 {
   0% {
-    transform: translateY(20px);
+    transform: translateY(20px) rotate(196deg);
   }
 
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px) rotate(196deg);
   }
 
   100% {
-    transform: translateY(20px);
+    transform: translateY(20px) rotate(196deg);
   }
 }
 
 @keyframes float3 {
   0% {
-    transform: translateY(40px);
+    transform: translateY(40px) rotate(230deg);
   }
 
   50% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(230deg);
   }
 
   100% {
-    transform: translateY(40px);
+    transform: translateY(40px) rotate(230deg);
   }
 }
 
@@ -207,15 +207,14 @@ footer .contact a i {
 }
 
 .tri-one {
-  animation: float1 4s infinite;
+  animation: float1 6s infinite;
   border-width: 230px 150px 40px 0;
   border-color: transparent #c3ffa4 transparent transparent;
 }
 
 .tri-two {
-  animation: float2 4s infinite;
+  animation: float2 3s infinite;
   width: 50px;
-  transform: rotate(196deg);
   border-width: 220px 50px 0 0;
   border-color: transparent #7b7228 #7b7228 transparent;
 }
@@ -224,7 +223,6 @@ footer .contact a i {
 
 .tri-four {
   animation: float3 4s infinite;
-  transform: rotate(230deg);
   border-width: 40px 80px 20px 0;
   border-color: transparent #6e3f11 transparent transparent;
 }
