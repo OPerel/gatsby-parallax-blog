@@ -1,5 +1,5 @@
 # Gatsby Parallax Blog  
-### Simple elegant blog using [GatsbyJS](www.gatsbyjs.org)
+### Simple and elegant responsive blog using [GatsbyJS](www.gatsbyjs.org)
 #### This website was made using:  
 
 * [React Scroll Parallax](https://jscottsmith.github.io/react-scroll-parallax-examples/examples/parallax-example/)
@@ -7,4 +7,4 @@
 * [Hero Patterns](https://www.heropatterns.com/)
 * [The SVG Repo](https://www.svgrepo.com/)
 
-#### Check it out: (https://gatsby-parallax-blog.netlify.com/)
+#### Check it out [here].(https://gatsby-parallax-blog.netlify.com/)

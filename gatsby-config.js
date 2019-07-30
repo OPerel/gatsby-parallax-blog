@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Parallax Blog`,
-    description: `A slick and minimal personal blog template with parallax effects.`,
+    title: `Gatsby Parallax Blog`,
+    description: `A minimalistic and responsive personal blog template with parallax effects.`,
     author: `https://github.com/OPerel`,
   },
   plugins: [
