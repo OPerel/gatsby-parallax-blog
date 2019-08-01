@@ -7,4 +7,4 @@
 * [Hero Patterns](https://www.heropatterns.com/)
 * [The SVG Repo](https://www.svgrepo.com/)
 
-#### Check it out [here].(https://gatsby-parallax-blog.netlify.com/)
+#### Check it out [here](https://gatsby-parallax-blog.netlify.com/).
