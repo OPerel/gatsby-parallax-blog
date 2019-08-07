@@ -5,7 +5,6 @@ import Layout from "../components/layout";
 import PostLink from '../components/postLink';
 import Hero from '../components/hero';
 import Wrappers from '../components/wrappers';
-import '../assets/allStyles.css';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import "../assets/allStyles.css"
 
 const PostNavWrap = styled.div`
   display: flex;
@@ -29,7 +28,7 @@ const PostNav = ({ prev, next }) => (
     {next && (
       <div>
         <StyledLink to={next.fields.slug}>
-          <ArrowLink className="far fa-arrow-alt-circle-left"></ArrowLink>
+          <ArrowLink className="far fa-arrow-alt-circle-left" />
           <span>Previous</span>
         </StyledLink>
       </div>
@@ -37,7 +36,7 @@ const PostNav = ({ prev, next }) => (
     {prev && (
       <div>
         <StyledLink to={prev.fields.slug}>
-          <ArrowLink className="far fa-arrow-alt-circle-right"></ArrowLink>
+          <ArrowLink className="far fa-arrow-alt-circle-right" />
           <span>Next</span>
         </StyledLink>
       </div>

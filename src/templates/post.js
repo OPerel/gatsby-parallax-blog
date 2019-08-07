@@ -5,7 +5,6 @@ import BgImage from 'gatsby-background-image';
 import Layout from '../components/layout';
 import Wrappers from '../components/wrappers';
 import PostNav from '../components/postNav';
-import '../assets/allStyles.css';
 
 const PostDate = styled.p`
   padding: 0 2% 2%;

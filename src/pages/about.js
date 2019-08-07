@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from "../components/layout";
 import BgImage from 'gatsby-background-image';
-import '../assets/allStyles.css'
 
 const AboutWrap = styled.div`
   position: relative;
