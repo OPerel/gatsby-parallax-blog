@@ -1,31 +1,21 @@
 import React from "react";
 import { graphql } from "gatsby";
-
 import { Parallax } from 'react-scroll-parallax';
 import Layout from "../components/layout";
 import PostLink from '../components/postLink';
-// import Footer from '../components/footer'
+import Hero from '../components/hero'
 import '../assets/allStyles.css';
 
-const IndexPage = ({ data, location }) => {
+const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   const images = data.allFile.edges;
   return (
     <Layout>
-      <div className="hero">
-        <div>
-          <Parallax y={[350, -300]}>
-            <h1>Welcome!</h1>
-          </Parallax>
-          <Parallax y={[-480, 480]}>
-            <h3>This is my cool parallax blog.</h3>
-          </Parallax>
-        </div>
-      </div>
+      <Hero />
       <div className="content-wrapper">
         <div className="content">
           {
-            edges.map(({ node }, idx) => {
+            edges.map(({ node }) => {
               const image = images.filter(image => image.node.name === node.frontmatter.image);
               return (
                 <Parallax key={node.id} y={[100, -140 ]}>

@@ -77,19 +77,6 @@ p {
   border-color: transparent #101027 transparent transparent;
 }
 
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.hero h3 {
-  font-weight: 300;
-}
-
 .content-wrapper {
   position: relative;
   width: 85%;
@@ -142,9 +129,6 @@ p {
 }
 
 @media only screen and (min-width: 770px) {
-  /* footer .footer-wrapper {
-    width: 65%;
-  } */
 
   .bg-container {
     background-blend-mode: overlay;
@@ -155,10 +139,6 @@ p {
   .bg-container::after {
     background-blend-mode: overlay;
     background-color: #00000084;
-  }
-
-  .hero {
-    font-size: 1.8rem;
   }
 
   .content-wrapper {
