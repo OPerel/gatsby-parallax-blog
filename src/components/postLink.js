@@ -34,12 +34,12 @@ const PostLinkGrid = styled.div`
 `
 
 const PostLinkExcerpt = styled.div`
-  h2 {
+  & > h2 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
   }
 
-  p {
+  & > p {
     margin-bottom: 10px;
   }
 `

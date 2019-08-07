@@ -49,43 +49,4 @@ p {
   font-weight: 300;
 }
 
-.about {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 85%;
-  margin: 0 auto;
-  padding: 45% 0;
-}
 
-.about .about-head {
-  display: flex;
-  align-items: baseline;
-  font-size: 1.3rem;
-}
-
-.about .about-head h2 {
-  margin-right: 5%;
-  font: 1.8rem;
-}
-
-.about #my-photo {
-  width: 180px;
-  height: 180px;
-  margin: 2%;
-  float: right;
-  border-radius: 50%;
-}
-
-@media only screen and (min-width: 770px) {
-  .about {
-    width: 65%;
-    height: 100vh;
-    padding: 0;
-  }
-
-  .about #my-photo {
-    width: 220px;
-    height: 220px;
-  }
-}
