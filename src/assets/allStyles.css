@@ -228,25 +228,6 @@ footer .contact a i {
   margin: 5% auto;
 }
 
-.content .post-nav {
-  display: flex;
-  justify-content: space-around;
-  max-width: 50%;
-  height: 10vh;
-  margin: 8% auto;
-}
-
-.content .post-nav .arrow-link a:hover {
-  text-decoration: none;
-}
-
-.content .post-nav .arrow-link .far {
-  display: block;
-  margin: 0 0 3% 0;
-  font-size: 1.6rem;
-  text-align: center;
-}
-
 .about {
   position: relative;
   display: flex;

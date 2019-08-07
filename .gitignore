@@ -44,6 +44,7 @@ typings/
 
 # Optional eslint cache
 .eslintcache
+.eslintrc.json
 
 # Optional REPL history
 .node_repl_history
@@ -67,3 +68,6 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# VS-code
+.vscode

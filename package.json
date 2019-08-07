@@ -20,9 +20,12 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-scroll-parallax": "^2.1.2",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
     "prettier": "^1.18.2"
   },
   "keywords": [
