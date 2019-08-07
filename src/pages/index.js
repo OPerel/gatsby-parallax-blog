@@ -3,7 +3,8 @@ import { graphql } from "gatsby";
 import { Parallax } from 'react-scroll-parallax';
 import Layout from "../components/layout";
 import PostLink from '../components/postLink';
-import Hero from '../components/hero'
+import Hero from '../components/hero';
+import Wrappers from '../components/wrappers';
 import '../assets/allStyles.css';
 
 const IndexPage = ({ data }) => {
@@ -12,8 +13,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Hero />
-      <div className="content-wrapper">
-        <div className="content">
+      <Wrappers>
           {
             edges.map(({ node }) => {
               const image = images.filter(image => image.node.name === node.frontmatter.image);
@@ -28,8 +28,7 @@ const IndexPage = ({ data }) => {
               )
             })
           }
-        </div>
-      </div>
+        </Wrappers>
     </Layout>
   )
 }

@@ -1,9 +1,29 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 import BgImage from 'gatsby-background-image';
 import Layout from '../components/layout';
+import Wrappers from '../components/wrappers';
 import PostNav from '../components/postNav';
 import '../assets/allStyles.css';
+
+const PostDate = styled.p`
+  padding: 0 2% 2%;
+`
+
+const StyledBgImg = styled(BgImage)`
+  width: 100%;
+  height: 40vh;
+`
+
+const PostBody = styled.div`
+  width: 85%;
+  margin: 5% auto;
+
+  @media only screen and (min-width: 770px) {
+    width: 75%;
+  }
+`
 
 export default ({ pageContext, data }) => {
   const { fluid } = data.file.childImageSharp;
@@ -11,23 +31,16 @@ export default ({ pageContext, data }) => {
   return(
     <Layout pageTitle={pageContext.post.frontmatter.title}>
       <div style={{ height: '10vh' }}></div>
-      <div className="content-wrapper">
-        <div className="content" style={{ backgroundAttachment: 'fixed' }}>
-          <p
-            style={{ padding: '0 2% 2%' }}
-            dangerouslySetInnerHTML={{
-            __html: pageContext.post.frontmatter.date
-            }}
-          />
-          <BgImage
-            fluid={fluid}
-            className="post-img"
-            style={{ backgroundAttachment: 'fixed' }}
-          />
-          <div className="post-body" dangerouslySetInnerHTML={{ __html: pageContext.post.html }} />
-          <PostNav prev={prev} next={next} />
-        </div>
-      </div>
+      <Wrappers page='post'>
+        <PostDate dangerouslySetInnerHTML={{ __html: pageContext.post.frontmatter.date }} />
+        <StyledBgImg
+          fluid={fluid}
+          className="post-img"
+          style={{ backgroundAttachment: 'fixed' }}
+        />
+        <PostBody dangerouslySetInnerHTML={{ __html: pageContext.post.html }} />
+        <PostNav prev={prev} next={next} />
+      </Wrappers>
     </Layout>
   )
 }
