@@ -190,39 +190,6 @@ footer .contact a i {
   height: 40vh;
 }
 
-.content .post-link {
-  width: 85%;
-  margin: 5% auto;
-}
-
-.content .post-link h2 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-
-
-.content .post-link a {
-  color: #94ada8;
-}
-
-.content .post-link p {
-  margin-bottom: 10px;
-}
-
-.content .post-link .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.content .post-link .grid .post-thumbnail {
-  grid-row-start: 1;
-  margin-bottom: 5%;
-}
-
-.content .post-link a:hover {
-  cursor: pointer;
-}
-
 .content .post-body {
   width: 85%;
   margin: 5% auto;
@@ -287,18 +254,6 @@ footer .contact a i {
 
   .content-wrapper {
     width: 65%;
-  }
-
-  .content .post-link .grid {
-    grid-template-columns: 3fr 1fr;
-    grid-column-gap: 2%;
-    align-items: end;
-    margin-bottom: 1rem;
-  }
-
-  .content .post-link .grid .post-thumbnail {
-    grid-row-start: initial;
-    margin: 0;
   }
 
   .content .post-body {
