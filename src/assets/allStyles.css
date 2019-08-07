@@ -12,7 +12,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: #000000cc;
   font-family: 'Muli', sans-serif;
   word-wrap: break-word;
   font-kerning: normal;
@@ -49,41 +49,16 @@ p {
   font-weight: 300;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  z-index: 3;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 90px;
-  transition: 0.4s
-}
-
-header #logo {
-  width: 100%;
-  height: 80%;
-  margin: 0 5%;
-  background-image: url('../images/logo.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-}
-
-header h1 {
-  font-size: 1.1rem;
-}
-
-header nav {
+/* header nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   min-width: 50%;
-}
+} */
 
-header nav a {
+/* header nav a {
   margin-right: 10%;
-}
+} */
 
 footer {
   position: fixed;
@@ -224,15 +199,6 @@ footer .contact a i {
 }
 
 @media only screen and (min-width: 770px) {
-  header #logo {
-    width: 80px;
-    height: 80px;
-  }
-
-  header h1 {
-    font-size: 1.3rem;
-  }
-
   footer .footer-wrapper {
     width: 65%;
   }

@@ -47,10 +47,15 @@ const PostLinkExcerpt = styled.div`
 const PostLinkImg = styled(Img)`
   grid-row-start: 1;
   margin-bottom: 5%;
+  transition: 0.3s;
 
   @media only screen and (min-width: 770px) {
     grid-row-start: initial;
     margin: 0;
+  }
+
+  ${StyledLink}:hover & {
+    filter: brightness(1.2);
   }
 `
 
@@ -59,8 +64,7 @@ const PostLink = ({ postData, image }) => (
     <PostLinkDate dangerouslySetInnerHTML={{ __html: postData.frontmatter.date }}></PostLinkDate>
     <StyledLink to={postData.fields.slug}>
       <PostLinkGrid>
-        <PostLinkExcerpt dangerouslySetInnerHTML={{ __html: postData.excerpt }}>
-        </PostLinkExcerpt>
+        <PostLinkExcerpt dangerouslySetInnerHTML={{ __html: postData.excerpt }} />
         <PostLinkImg fixed={image} className="post-thumbnail" />
       </PostLinkGrid>
     </StyledLink>

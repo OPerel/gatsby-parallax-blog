@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import "../assets/allStyles.css"
 
-const PostNavDiv = styled.div`
+const PostNavWrap = styled.div`
   display: flex;
   justify-content: space-around;
   max-width: 50%;
@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
 `
 
 const PostNav = ({ prev, next }) => (
-  <PostNavDiv>
+  <PostNavWrap>
     {next && (
       <div>
         <StyledLink to={next.fields.slug}>
@@ -42,7 +42,7 @@ const PostNav = ({ prev, next }) => (
         </StyledLink>
       </div>
     )}
-  </PostNavDiv>
+  </PostNavWrap>
 )
 
 

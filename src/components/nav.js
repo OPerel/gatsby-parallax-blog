@@ -1,12 +1,33 @@
 import React from "react";
 import { Link } from 'gatsby';
-import "../assets/allStyles.css"
+import styled from 'styled-components';
+
+const NavWrap = styled.nav`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 50%;
+`
+
+const StyledLink = styled(Link)`
+  margin-right: 10%;
+`
 
 const Nav = () => (
-  <nav>
-    <Link to='/' activeStyle={{ textDecoration: 'underline' }}>Blog</Link>
-    <Link to='/about' activeStyle={{ textDecoration: 'underline' }}>About Me</Link>
-  </nav>
+  <NavWrap>
+    <StyledLink
+      to='/'
+      activeStyle={{ textDecoration: 'underline' }}
+    >
+      Blog
+    </StyledLink>
+    <StyledLink
+      to='/about'
+      activeStyle={{ textDecoration: 'underline' }}
+    >
+      About Me
+    </StyledLink>
+  </NavWrap>
 )
 
 
