@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 
 const query = graphql`{
   site {
@@ -10,31 +11,81 @@ const query = graphql`{
   }
 }`
 
+const FooterWrap = styled.footer`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  background-color: #000026;
+`
+
+const FooterContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 85%;
+
+  @media only screen and (min-width: 770px) {
+    width: 65%;
+  }
+`
+
+const FooterSection = styled.div`
+  width: 50%;
+  z-index: 4;
+`
+
+const FooterHeader = styled.h5`
+  margin-bottom: 0.3rem;
+  font-size: 1em;
+`
+
+const StyledLink = styled.a`
+  display: block;
+`
+
+const LinkIcon = styled.i`
+  margin: 0 5% 0 0;
+  font-size: 1.3rem;
+`
+
+const FooterTri = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 38vh 100vw 0 0;
+  border-color: transparent #372109b3 transparent transparent;
+`
+
 const Footer = () => (
   <StaticQuery
     query={query}
     render={data => {
       const { siteMetadata } = data.site;
       return (
-        <footer>
-          <div className="footer-wrapper">
-            <div className="footer-info">
-              <h5 dangerouslySetInnerHTML={{ __html: siteMetadata.title }}/>
+        <FooterWrap>
+          <FooterContent>
+            <FooterSection>
+              <FooterHeader dangerouslySetInnerHTML={{ __html: siteMetadata.title }}/>
               <span style={{ fontSize: '0.85rem' }}>© {new Date().getFullYear()}, By Ori Perelman</span>
-            </div>
-            <div className="contact">
-              <a href="mailto: oriperelman@gmail.com">
-                <i className="far fa-envelope"></i>
+            </FooterSection>
+            <FooterSection>
+              <StyledLink href="mailto: oriperelman@gmail.com">
+                <LinkIcon className="far fa-envelope" />
                 <span>Drop a line.</span>
-              </a>
-              <a href={siteMetadata.author} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i>
+              </StyledLink>
+              <StyledLink href={siteMetadata.author} target="_blank" rel="noopener noreferrer">
+                <LinkIcon className="fab fa-github" />
                 <span>Source and other projects.</span>
-              </a>
-            </div>
-          </div>
-          <div className="footer-tri" />
-        </footer>
+              </StyledLink>
+            </FooterSection>
+          </FooterContent>
+          <FooterTri />
+        </FooterWrap>
       )
     }}
   />
