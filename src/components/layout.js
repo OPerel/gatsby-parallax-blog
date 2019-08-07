@@ -5,7 +5,7 @@ import Header from "./header";
 import Footer from './footer';
 import BottomTri from './bottomTri';
 import BgImg from '../images/bg1.gif';
-import "../assets/allStyles.css"
+import GlobalStyle from '../theme/allStyles';
 
 const LayoutWrap = styled.div`
  positionL relatuve;
@@ -40,6 +40,7 @@ const Main = styled.main`
 
 const Layout = ({ children, pageTitle }) => (
   <LayoutWrap>
+    <GlobalStyle />
     <Header pageTitle={pageTitle} />
     <Main>
       {children}
