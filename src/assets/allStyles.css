@@ -49,47 +49,6 @@ p {
   font-weight: 300;
 }
 
-.tri {
-  position: absolute;
-  bottom: calc(-75px + 1px);
-  left: 0;
-  z-index: 2;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 120px 100vw 75px 0;
-  border-color: transparent #101027 transparent transparent;
-}
-
-.bg-container {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 44vh;
-  background-image: url('../images/bg1.gif');
-  background-size: contain;
-  background-blend-mode: overlay;
-  background-color: #00000035;
-}
-
-.bg-container::before,
-.bg-container::after {
-  background-blend-mode: overlay;
-  background-color: #00000035;
-}
-
-/* .content-wrapper {
-  position: relative;
-  width: 85%;
-  margin: 8% auto 0;
-} */
-
-/* .content {
-  padding: 20px 0 70px 0;
-  background-color: #10202dab;
-  color: #94ada8;
-  background-image: url("../images/circuit-board.svg");
-} */
-
 .about {
   position: relative;
   display: flex;
@@ -119,26 +78,6 @@ p {
 }
 
 @media only screen and (min-width: 770px) {
-
-  .bg-container {
-    background-blend-mode: overlay;
-    background-color: #00000084;
-  }
-
-  .bg-container::before,
-  .bg-container::after {
-    background-blend-mode: overlay;
-    background-color: #00000084;
-  }
-
-  /* .content-wrapper {
-    width: 65%;
-  } */
-
-  /* .content .post-body {
-    width: 75%;
-  } */
-
   .about {
     width: 65%;
     height: 100vh;

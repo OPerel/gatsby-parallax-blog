@@ -35,7 +35,6 @@ export default ({ pageContext, data }) => {
         <PostDate dangerouslySetInnerHTML={{ __html: pageContext.post.frontmatter.date }} />
         <StyledBgImg
           fluid={fluid}
-          className="post-img"
           style={{ backgroundAttachment: 'fixed' }}
         />
         <PostBody dangerouslySetInnerHTML={{ __html: pageContext.post.html }} />
