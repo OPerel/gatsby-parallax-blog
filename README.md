@@ -8,4 +8,6 @@
 * [Hero Patterns](https://www.heropatterns.com/)
 * [The SVG Repo](https://www.svgrepo.com/)
 
+This is my submission to [ZTM's coding challenge #19](https://github.com/zero-to-mastery/coding_challenge-19).
+
 #### Check it out [here](https://gatsby-parallax-blog.netlify.com/).
