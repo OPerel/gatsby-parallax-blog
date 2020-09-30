@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import 'typeface-titillium-web';
 
 const GlobalStyle = createGlobalStyle`
   html {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     font: 112.5%/1.45em georgia, serif;
@@ -16,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #000000cc;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     word-wrap: break-word;
     font-kerning: normal;
     -moz-font-feature-settings: "kern", "liga", "clig", "calt";

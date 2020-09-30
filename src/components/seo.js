@@ -44,9 +44,7 @@ function SEO({ pageTitle }) {
           content: `website`,
         },
       ].concat()}
-    >
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,600&display=swap"  />
-    </Helmet>
+    ></Helmet>
   )
 }
 
