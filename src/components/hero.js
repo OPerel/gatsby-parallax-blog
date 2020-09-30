@@ -15,6 +15,10 @@ const HeroWrapper = styled.div`
   }
 `
 
+const Heading = styled.h1`
+  font-weight: 600;
+`
+
 const TagLine = styled.h3`
   font-weight: 300;
 `
@@ -23,7 +27,7 @@ const Hero = () => (
   <HeroWrapper>
     <div>
       <Parallax y={[350, -300]}>
-        <h1>Welcome!</h1>
+        <Heading>Welcome!</Heading>
       </Parallax>
       <Parallax y={[-480, 480]}>
         <TagLine>This is my cool parallax blog.</TagLine>
