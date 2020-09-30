@@ -2,6 +2,10 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 const query = graphql`{
   site {
     siteMetadata {
@@ -47,7 +51,7 @@ const StyledLink = styled.a`
   display: block;
 `
 
-const LinkIcon = styled.i`
+const LinkIcon = styled(FontAwesomeIcon)`
   margin: 0 5% 0 0;
   font-size: 1.3rem;
 `
@@ -75,11 +79,11 @@ const Footer = () => (
             </FooterSection>
             <FooterSection>
               <StyledLink href="mailto: oriperelman@gmail.com">
-                <LinkIcon className="far fa-envelope" />
+                <LinkIcon icon={faEnvelope} />
                 <span>Drop a line.</span>
               </StyledLink>
               <StyledLink href={siteMetadata.author} target="_blank" rel="noopener noreferrer">
-                <LinkIcon className="fab fa-github" />
+                <LinkIcon icon={faGithub} />
                 <span>Source and other projects.</span>
               </StyledLink>
             </FooterSection>
