@@ -47,27 +47,29 @@ const Logo = styled.div`
 `
 
 class Header extends React.Component {
+  observer;
+
   constructor (props) {
     super (props);
     this.state = {
-      scrollPos: 0
-    }
+      headerBg: false
+    };
   }
 
-  updateScrollPos = () => {
-    this.setState({ scrollPos: window.scrollY });
+  updateHeaderBg = (entries) => {
+    this.setState({ headerBg: entries[0].isIntersecting });
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', this.updateScrollPos);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('scroll', this.updateScrollPos);
+    this.observer = new IntersectionObserver((entries, observer) => this.updateHeaderBg(entries), { 
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+    this.observer.observe(document.querySelector('#header-indicator'));
   }
 
   render () {
-    const { scrollPos } = this.state;
+    const { headerBg } = this.state;
     return (
       <StaticQuery
         query={query}
@@ -75,7 +77,7 @@ class Header extends React.Component {
           return (
             <>
               <SEO pageTitle={this.props.pageTitle} />
-              <HeaderWrap bg={scrollPos < 100 ? `transparent` : `#222222` }>
+              <HeaderWrap bg={headerBg ? `transparent` : `#222222`}>
                 <LeftSection>
                   <Logo />
                   <h1

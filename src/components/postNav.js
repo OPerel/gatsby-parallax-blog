@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
+
 const PostNavWrap = styled.div`
   display: flex;
   justify-content: space-around;
@@ -10,9 +13,9 @@ const PostNavWrap = styled.div`
   margin: 8% auto;
 `
 
-const ArrowLink = styled.i`
+const ArrowLink = styled(FontAwesomeIcon)`
   display: block !important;
-  margin: 0 0 3% 0;
+  margin: 0 auto;
   font-size: 1.6rem;
   text-align: center;
 `
@@ -28,7 +31,7 @@ const PostNav = ({ prev, next }) => (
     {next && (
       <div>
         <StyledLink to={next.fields.slug}>
-          <ArrowLink className="far fa-arrow-alt-circle-left" />
+          <ArrowLink icon={faArrowAltCircleLeft} />
           <span>Previous</span>
         </StyledLink>
       </div>
@@ -36,7 +39,7 @@ const PostNav = ({ prev, next }) => (
     {prev && (
       <div>
         <StyledLink to={prev.fields.slug}>
-          <ArrowLink className="far fa-arrow-alt-circle-right" />
+          <ArrowLink icon={faArrowAltCircleRight} />
           <span>Next</span>
         </StyledLink>
       </div>
