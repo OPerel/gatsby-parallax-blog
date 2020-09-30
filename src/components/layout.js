@@ -43,6 +43,7 @@ const Layout = ({ children, pageTitle }) => (
     <GlobalStyle />
     <Header pageTitle={pageTitle} />
     <Main>
+      <div id="header-indicator"></div>
       {children}
       <BottomTri />
     </Main>
