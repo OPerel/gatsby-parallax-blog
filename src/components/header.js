@@ -68,6 +68,10 @@ class Header extends React.Component {
     this.observer.observe(document.querySelector('#header-indicator'));
   }
 
+  componentWillUnmount() {
+    this.observer.unobserve(document.querySelector('#header-indicator'));
+  }
+
   render () {
     const { headerBg } = this.state;
     return (
