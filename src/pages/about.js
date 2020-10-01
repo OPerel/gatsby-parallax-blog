@@ -34,7 +34,10 @@ const MyStyledImage = styled(BgImage)`
   height: 180px;
   margin: 2%;
   float: right;
-  border-radius: 50%;
+
+  &:before {
+    border-radius: 50%;
+  }
 
   @media only screen and (min-width: 770px) {
     width: 220px;

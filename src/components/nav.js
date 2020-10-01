@@ -17,13 +17,13 @@ const Nav = () => (
   <NavWrap>
     <StyledLink
       to='/'
-      activeStyle={{ textDecoration: 'underline' }}
+      activeStyle={{ textDecoration: 'underline', pointerEvents: 'none' }}
     >
       Blog
     </StyledLink>
     <StyledLink
       to='/about'
-      activeStyle={{ textDecoration: 'underline' }}
+      activeStyle={{ textDecoration: 'underline', pointerEvents: 'none' }}
     >
       About Me
     </StyledLink>

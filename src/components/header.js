@@ -3,7 +3,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import SEO from './seo';
 import Nav from './nav';
-import logoImg from '../images/logo.svg';
  
 const query = graphql`{
   site {
@@ -20,29 +19,27 @@ const HeaderWrap = styled.header`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 90px;
+  padding: 3% 0;
   transition: 0.4s;
   background-color: ${props => props.bg};
+
+  @media only screen and (min-width: 770px) {
+    padding: 1.5% 0;
+  }
 `
 
 const LeftSection = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-`
 
-const Logo = styled.div`
-  width: 100%;
-  height: 80%;
-  margin: 0 5%;
-  background-image: url(${logoImg});
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 50%;
+  & > h1 {
+    margin: 0 0 0 10%;
+    font-size: 1rem;
 
-  @media only screen and (min-width: 770px) {
-    width: 75px;
-    height: 75px;
+    @media only screen and (min-width: 770px) {
+      font-size: 1.1rem;
+    }
   }
 `
 
@@ -56,16 +53,20 @@ class Header extends React.Component {
     };
   }
 
-  updateHeaderBg = (entries) => {
-    this.setState({ headerBg: entries[0].isIntersecting });
+  updateHeaderBg = (isIntersecting) => {
+    this.setState({ headerBg: isIntersecting });
   }
 
   componentDidMount() {
-    this.observer = new IntersectionObserver((entries, observer) => this.updateHeaderBg(entries), { 
+    this.observer = new IntersectionObserver((entries, observer) => this.updateHeaderBg(entries[0].isIntersecting), { 
       rootMargin: '0px',
       threshold: 0.1
     });
     this.observer.observe(document.querySelector('#header-indicator'));
+  }
+
+  componentWillUnmount() {
+    this.observer.unobserve(document.querySelector('#header-indicator'));
   }
 
   render () {
@@ -79,14 +80,7 @@ class Header extends React.Component {
               <SEO pageTitle={this.props.pageTitle} />
               <HeaderWrap bg={headerBg ? `transparent` : `#222222`}>
                 <LeftSection>
-                  <Logo />
-                  <h1
-                    dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.title }}
-                    style={{
-                      margin: 0,
-                      fontSize: `1.1rem`
-                    }}
-                  />
+                  <h1 dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.title }} />
                 </LeftSection>
                 <Nav />
               </HeaderWrap>

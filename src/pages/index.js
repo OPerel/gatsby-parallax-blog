@@ -13,21 +13,21 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Hero />
       <Wrappers>
-          {
-            edges.map(({ node }) => {
-              const image = images.filter(image => image.node.name === node.frontmatter.image);
-              return (
-                <Parallax key={node.id} y={[100, -140 ]}>
-                  <PostLink
-                    key={node.id}
-                    postData={node}
-                    image={image[0].node.childImageSharp.fixed}
-                  />
-                </Parallax>
-              )
-            })
-          }
-        </Wrappers>
+        {
+          edges.map(({ node }) => {
+            const image = images.filter(image => image.node.name === node.frontmatter.image);
+            return (
+              <Parallax key={node.id} y={[100, -140 ]}>
+                <PostLink
+                  key={node.id}
+                  postData={node}
+                  image={image[0].node.childImageSharp.fixed}
+                />
+              </Parallax>
+            )
+          })
+        }
+      </Wrappers>
     </Layout>
   )
 }
