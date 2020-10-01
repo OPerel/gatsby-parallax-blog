@@ -37,7 +37,6 @@ const GlobalStyle = createGlobalStyle`
   a:hover {
     text-decoration: underline;
     color: #2cccd8;
-    font-weight: 500;
   }
 
   h1, h2, h3, h4, h5, h6 {
