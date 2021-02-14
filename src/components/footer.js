@@ -62,7 +62,7 @@ const FooterTri = styled.div`
   right: 0;
   border-style: solid;
   border-width: 38vh 100vw 0 0;
-  border-color: transparent #372109b3 transparent transparent;
+  border-color: transparent #461e1075 transparent transparent;
 `
 
 const Footer = () => (
@@ -75,7 +75,15 @@ const Footer = () => (
           <FooterContent>
             <FooterSection>
               <FooterHeader dangerouslySetInnerHTML={{ __html: siteMetadata.title }}/>
-              <span style={{ fontSize: '0.85rem' }}>© {new Date().getFullYear()}, By Ori Perelman</span>
+              <span style={{ fontSize: '0.85rem' }}>
+                © {new Date().getFullYear()}, By
+                <a
+                  href="https://www.oriperelman.com"
+                  target="_blank"
+                  rel="noopener"
+                > Ori Perelman
+                </a>
+              </span>
             </FooterSection>
             <FooterSection>
               <StyledLink href="mailto: oriperelman@gmail.com">
