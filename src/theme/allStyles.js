@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #000000cc;
+
     font-family: 'Titillium Web', sans-serif;
     word-wrap: break-word;
     font-kerning: normal;
@@ -24,11 +24,11 @@ const GlobalStyle = createGlobalStyle`
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-    color: #a4ecff;
+    color: #d9f7ff
   }
 
   a {
-    color: #a4ecff;
+    color: #72e2ff;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
