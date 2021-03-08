@@ -49,7 +49,7 @@ class Header extends React.Component {
   constructor (props) {
     super (props);
     this.state = {
-      headerBg: false
+      headerBg: true
     };
   }
 
@@ -78,7 +78,7 @@ class Header extends React.Component {
           return (
             <>
               <SEO pageTitle={this.props.pageTitle} />
-              <HeaderWrap bg={!headerBg ? `transparent` : `#222222`}>
+              <HeaderWrap bg={headerBg ? `transparent` : `#222222`}>
                 <LeftSection>
                   <h1 dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.title }} />
                 </LeftSection>
